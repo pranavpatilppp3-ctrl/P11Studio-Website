@@ -1,0 +1,3253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>P11 Studio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Card look like button */
+.services-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.services-section > div {
+  flex: 0 0 auto; /* Prevent shrinking */
+}
+
+.vfx-card, .new-card, .ai-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.vfx-card:hover, .new-card:hover, .ai-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Popup background */
+.vfx-popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass effect box with animation */
+.glass-effect {
+  position: relative;
+  width: 80%;
+  max-width: 850px; 
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+
+  opacity: 0;
+  transform: scale(0.85) translateY(-20px);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.glass-effect.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Background video inside box */
+.vfx-bg-video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.vfx-bg-video.active {
+  opacity: 1;
+}
+
+/* Text content */
+.vfx-text {
+  padding: 20px;
+  color: #fff;
+}
+
+.vfx-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vfx-logo {
+  height: 40px;
+}
+
+.col-md-4 {
+  width: 300px; /* Fixed width for all cards to keep single line */
+  text-align: center;
+}
+
+.services-1 .icon img {
+  width: 120px;
+  height: 60px;
+}
+
+</style>
+
+  <style>
+/* ===== P11 STUDIO CUSTOM REFINEMENTS ===== */
+html { scroll-behavior: smooth; }
+#ftco-navbar { height:70px !important; min-height:70px !important; z-index:9999; }
+#ftco-navbar .container { height:70px; position:relative; }
+.navbar-brand::before, .navbar-brand::after { display:none !important; content:none !important; }
+.navbar-brand { position:absolute; left:0; top:50%; transform:translateY(-50%); height:70px; padding:0 !important; margin:0 !important; display:flex; align-items:center; z-index:10; }
+.navbar-logo { height:100px; width:auto; max-width:none; display:block; object-fit:contain; }
+#ftco-nav { height:70px; display:flex; align-items:center; }
+#ftco-nav .navbar-nav { align-items:center; }
+.hero-wrap { position:relative; background-image:url("images/hero-bg.png"); background-size:cover; background-position:center center; background-repeat:no-repeat; background-attachment:scroll; }
+.hero-wrap .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.15); z-index:1; }
+.hero-wrap .container { position:relative; z-index:2; }
+.hero-wrap .mouse { position:absolute; z-index:5; }
+.mouse-icon { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; cursor:pointer; outline:none; }
+.mouse-icon:focus-visible { outline:3px solid #4169ff; outline-offset:6px; border-radius:6px; }
+.mouse-icon:focus { outline:2px solid #4169ff; outline-offset:5px; }
+.mouse-icon:focus:not(:focus-visible) { outline:none; }
+#about-section { scroll-margin-top:70px; }
+@media (max-width:991.98px) { #ftco-navbar {height:60px !important; min-height:60px !important;} #ftco-navbar .container {height:60px;} .navbar-brand {height:60px;} .navbar-logo {height:70px;} #ftco-nav {height:auto;} }
+@media (max-width:768px) { .hero-wrap {background-size:cover; background-position:center center;} }
+</style>
+  
+<style>
+/* =========================================================
+   P11 STUDIO — DARK CINEMATIC THEME
+   Inspired by the black / deep-red tone of the P11 logo & hero
+   ========================================================= */
+:root{
+  --p11-bg:#070708;
+  --p11-bg-2:#0b0b0e;
+  --p11-surface:#101014;
+  --p11-surface-2:#151519;
+  --p11-border:rgba(255,255,255,.08);
+  --p11-text:#f4f4f5;
+  --p11-muted:#9a9aa3;
+  --p11-red:#c91524;
+  --p11-red-2:#7d0d16;
+  --p11-glow:rgba(201,21,36,.22);
+}
+
+html,body{background:var(--p11-bg)!important;color:var(--p11-text);}
+body{background:#070708!important;color:#ddd!important;}
+
+/* Main page sections */
+.ftco-section,
+.ftco-about,
+#about-section,
+#projects-section,
+#services-section,
+#contact-section,
+.ftco-counter-section,
+.ftco-partner,
+.ftco-footer{background:var(--p11-bg)!important;color:var(--p11-text)!important;}
+
+/* Subtle separation between sections */
+.ftco-section{position:relative;}
+.ftco-section:not(.hero-wrap)::before{
+  content:"";
+  position:absolute;
+  top:0;left:8%;right:8%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,21,36,.20),transparent);
+  pointer-events:none;
+}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6,
+.heading-section h2,
+.ftco-heading-2{color:#f5f5f6!important;}
+p{color:#a8a8b0;}
+.text-muted{color:#888891!important;}
+
+/* Big section titles */
+.heading-section .big,
+.heading-section h1.big{color:rgba(255,255,255,.035)!important;}
+.heading-section h2:after{background:var(--p11-red)!important;}
+
+/* Navbar */
+#ftco-navbar,
+.ftco_navbar,
+.ftco-navbar-light.scrolled,
+.ftco-navbar-light.awake,
+.ftco-navbar-light{background:rgba(5,5,7,.92)!important;}
+#ftco-navbar{border-bottom:1px solid rgba(255,255,255,.06)!important;box-shadow:0 8px 30px rgba(0,0,0,.22)!important;backdrop-filter:blur(14px);}
+#ftco-navbar .nav-link{color:#bdbdc4!important;transition:color .25s ease;}
+#ftco-navbar .nav-link:hover,
+#ftco-navbar .nav-item.active .nav-link{color:#fff!important;}
+#ftco-navbar .nav-item.active .nav-link span:before{background:var(--p11-red)!important;}
+.navbar-toggler{border-color:rgba(255,255,255,.16)!important;color:#ddd!important;}
+
+/* Hero — keep cinematic image but make it darker */
+.hero-wrap{background-color:#050506!important;}
+.hero-wrap .overlay{background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.28),rgba(0,0,0,.62))!important;}
+.hero-wrap:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,transparent 20%,rgba(0,0,0,.38) 100%);z-index:1;pointer-events:none;}
+.hero-wrap .container{z-index:2;}
+.hero-wrap .text h1{color:#fff!important;text-shadow:0 8px 35px rgba(0,0,0,.7);}
+.hero-wrap .text h2{color:#ddd!important;}
+.hero-wrap .subheading{color:#d0d0d5!important;}
+.mouse{z-index:5!important;}
+.mouse-icon{color:#fff!important;}
+.mouse-wheel{border-color:rgba(255,255,255,.5)!important;}
+.mouse-wheel span{color:#fff!important;}
+
+/* About image */
+.img-about .overlay{background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.65))!important;}
+
+/* Generic cards / portfolio / service surfaces */
+.services-1,
+.services-section > div,
+.blog-entry,
+.project,
+.work,
+.card,
+.resume-wrap,
+.bg-light,
+.testimony-wrap,
+.contact-form,
+#contact-section .info-wrap{
+  background:linear-gradient(145deg,#121216,#0b0b0e)!important;
+  border:1px solid var(--p11-border)!important;
+  color:#ddd!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.25)!important;
+}
+.services-1:hover,
+.project:hover,
+.work:hover,
+.blog-entry:hover,
+.services-section > div:hover{
+  border-color:rgba(201,21,36,.35)!important;
+  box-shadow:0 18px 55px rgba(0,0,0,.45),0 0 30px var(--p11-glow)!important;
+}
+
+/* Service icons */
+.services-1 .icon,
+.services-1 .icon span{color:#fff!important;}
+.services-1 .icon{filter:drop-shadow(0 0 12px rgba(201,21,36,.18));}
+
+/* Buttons */
+.btn-primary,
+.btn.btn-primary{
+  background:linear-gradient(135deg,var(--p11-red),#8e0e18)!important;
+  border-color:var(--p11-red)!important;
+  color:#fff!important;
+  box-shadow:0 8px 25px rgba(201,21,36,.18)!important;
+}
+.btn-primary:hover,
+.btn.btn-primary:hover{background:linear-gradient(135deg,#e11b2c,#a40f1b)!important;border-color:#e11b2c!important;}
+
+/* Forms */
+.form-control,
+input.form-control,
+textarea.form-control,
+select.form-control{
+  background:#0d0d10!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  color:#eee!important;
+}
+.form-control::placeholder{color:#777780!important;}
+.form-control:focus{background:#101014!important;border-color:rgba(201,21,36,.7)!important;color:#fff!important;box-shadow:0 0 0 .15rem rgba(201,21,36,.10)!important;}
+
+/* Links */
+a{color:#d5d5da;}
+a:hover{color:#fff;}
+
+/* Portfolio captions / overlays */
+.project .text,
+.work .text{color:#fff!important;}
+.project .text h3,
+.work .text h3{color:#fff!important;}
+.project .text span,
+.work .text span{color:#aaa!important;}
+
+/* Counters / numbers */
+.ftco-counter .text,
+.ftco-counter .text strong{color:#fff!important;}
+
+/* Partner/logo area */
+.ftco-partner{background:#09090b!important;}
+.partner{opacity:.72;transition:opacity .25s ease;}
+.partner:hover{opacity:1;}
+
+/* Footer */
+.ftco-footer{background:#050506!important;border-top:1px solid rgba(255,255,255,.07)!important;}
+.ftco-footer .ftco-footer-widget h2{color:#fff!important;}
+.ftco-footer p,
+.ftco-footer .block-23 span.text,
+.ftco-footer li a{color:#8f8f98!important;}
+.ftco-footer li a:hover{color:#fff!important;}
+.ftco-footer-social a{background:#111116!important;color:#ddd!important;border:1px solid rgba(255,255,255,.08);}
+.ftco-footer-social a:hover{background:var(--p11-red)!important;color:#fff!important;border-color:var(--p11-red)!important;}
+
+/* Popup / glass cards */
+.vfx-popup{background:rgba(0,0,0,.86)!important;}
+.glass-effect{background:rgba(13,13,17,.88)!important;border:1px solid rgba(255,255,255,.10);box-shadow:0 25px 80px rgba(0,0,0,.7),0 0 35px rgba(201,21,36,.12)!important;}
+.vfx-text{color:#eee!important;}
+
+/* Loader */
+#ftco-loader{background:#050506!important;}
+#ftco-loader .path{stroke:var(--p11-red)!important;}
+#ftco-loader .path-bg{stroke:#25252b!important;}
+
+/* Selection */
+::selection{background:var(--p11-red);color:#fff;}
+
+/* Mobile */
+@media(max-width:991.98px){
+  #ftco-nav{background:#09090b!important;border-top:1px solid rgba(255,255,255,.07)!important;box-shadow:0 15px 35px rgba(0,0,0,.45)!important;}
+  #ftco-nav .nav-link{color:#ccc!important;}
+  #ftco-nav .nav-item.active .nav-link{color:#fff!important;}
+}
+</style>
+
+
+<style id="p11-enhanced-dark-theme">
+/* =========================================================
+   P11 STUDIO — ENHANCED DARK / WHITE TYPOGRAPHY THEME
+   ========================================================= */
+:root{
+  --p11-black:#050505;
+  --p11-dark:#090909;
+  --p11-panel:#0d0d0d;
+  --p11-panel-2:#111111;
+  --p11-white:#ffffff;
+  --p11-soft:#f2f2f2;
+  --p11-red:#d10f1f;
+  --p11-red-bright:#ff2638;
+  --p11-border:rgba(255,255,255,.10);
+  --p11-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+html{scroll-behavior:smooth;background:var(--p11-black);}
+body{
+  background:var(--p11-black) !important;
+  color:var(--p11-white) !important;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ALL MAIN TEXT WHITE */
+body,p,span,small,strong,b,em,li,dt,dd,
+h1,h2,h3,h4,h5,h6,
+label,.text,.subheading,.heading-section,
+.ftco-heading-2,.ftco-footer-widget,
+.navbar-nav .nav-link,
+a{color:var(--p11-white);}
+
+p,.text{opacity:.92;}
+
+/* Links */
+a{transition:color .25s ease,opacity .25s ease,transform .25s ease;}
+a:hover,a:focus{color:var(--p11-red-bright) !important;}
+
+/* Selection */
+::selection{background:var(--p11-red);color:#fff;}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background:#050505;}
+::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:10px;}
+::-webkit-scrollbar-thumb:hover{background:var(--p11-red);}
+
+/* Navbar — premium dark glass */
+#ftco-navbar{
+  background:rgba(4,4,4,.82) !important;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+#ftco-navbar .navbar-nav .nav-link{
+  color:#fff !important;
+  font-weight:500;
+  letter-spacing:.3px;
+}
+#ftco-navbar .navbar-nav .nav-link:hover,
+#ftco-navbar .navbar-nav .nav-item.active .nav-link{
+  color:#fff !important;
+}
+#ftco-navbar .navbar-nav .nav-item.active .nav-link::after,
+#ftco-navbar .navbar-nav .nav-link:hover::after{
+  background:var(--p11-red) !important;
+}
+.navbar-toggler{border-color:rgba(255,255,255,.18) !important;}
+.navbar-toggler .oi,.navbar-toggler span{color:#fff !important;}
+
+/* Hero */
+.hero-wrap{
+  background-color:#030303 !important;
+}
+.hero-wrap .overlay{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(130,0,15,.12),transparent 45%),
+    linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.58)) !important;
+}
+.hero-wrap h1{
+  color:#fff !important;
+  text-shadow:0 8px 35px rgba(0,0,0,.8);
+  letter-spacing:1px;
+}
+.hero-wrap h2,.hero-wrap .subheading{color:#fff !important;}
+.hero-wrap .subheading{letter-spacing:4px;}
+.hero-wrap .txt-rotate{color:#fff !important;}
+
+/* Section backgrounds */
+.ftco-section,
+.ftco-about,
+.ftco-no-pt,
+.ftco-no-pb{
+  background:#060606 !important;
+}
+
+/* Section headings */
+.heading-section h2,
+.heading-section h3,
+.heading-section .subheading{
+  color:#fff !important;
+}
+.heading-section .subheading{
+  letter-spacing:3px;
+  opacity:.9;
+}
+.heading-section h2{
+  font-weight:600;
+  letter-spacing:.3px;
+}
+.heading-section h2::after{
+  background:var(--p11-red) !important;
+}
+
+/* About */
+#about-section .text p,
+#about-section p{color:#fff !important;}
+#about-section .img{
+  border:1px solid var(--p11-border);
+  box-shadow:var(--p11-shadow);
+}
+
+/* Cards / portfolio / service blocks */
+.project,
+.services-1,
+.services-wrap,
+.blog-entry,
+.resume-wrap,
+.contact-section .box,
+.testimony-wrap{
+  background:linear-gradient(145deg,#101010,#080808) !important;
+  border:1px solid var(--p11-border);
+  box-shadow:0 15px 45px rgba(0,0,0,.28);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.project:hover,
+.services-1:hover,
+.services-wrap:hover,
+.blog-entry:hover,
+.resume-wrap:hover{
+  transform:translateY(-5px);
+  border-color:rgba(209,15,31,.45);
+  box-shadow:0 20px 55px rgba(0,0,0,.48),0 0 25px rgba(209,15,31,.08);
+}
+
+/* Card text */
+.project .text h3,
+.project .text h3 a,
+.services-1 h3,
+.services-1 h3 a,
+.blog-entry h3,
+.blog-entry h3 a,
+.resume-wrap h2,
+.resume-wrap h3,
+.resume-wrap h4{color:#fff !important;}
+.project .text p,
+.services-1 p,
+.blog-entry p,
+.resume-wrap p{color:#fff !important;opacity:.88;}
+
+/* Red accent icons */
+.services-1 .icon,
+.services-1 .icon span,
+.icon-long-arrow-right,
+.icon-arrow-right,
+.ftco-footer-social a span{
+  color:var(--p11-red-bright) !important;
+}
+
+/* Buttons */
+.btn,
+.btn-primary,
+.btn.btn-primary{
+  color:#fff !important;
+  background:linear-gradient(135deg,#b50919,#ef1d31) !important;
+  border-color:#b50919 !important;
+  box-shadow:0 10px 25px rgba(209,15,31,.18);
+  transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;
+}
+.btn:hover,.btn:focus,
+.btn-primary:hover,.btn-primary:focus{
+  color:#fff !important;
+  transform:translateY(-2px);
+  filter:brightness(1.08);
+  box-shadow:0 14px 30px rgba(209,15,31,.30);
+}
+
+/* Forms */
+.form-control,
+select.form-control,
+textarea.form-control{
+  color:#fff !important;
+  background:#0b0b0b !important;
+  border:1px solid rgba(255,255,255,.13) !important;
+}
+.form-control::placeholder{color:#fff !important;opacity:.65;}
+.form-control:focus{
+  color:#fff !important;
+  background:#0b0b0b !important;
+  border-color:rgba(209,15,31,.7) !important;
+  box-shadow:0 0 0 .15rem rgba(209,15,31,.12) !important;
+}
+
+/* Contact details */
+.contact-section .box h3,
+.contact-section .box p,
+.contact-section .box .text,
+.contact-section label{color:#fff !important;}
+
+/* Footer */
+.ftco-footer{
+  background:#030303 !important;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.ftco-footer h2,
+.ftco-footer h3,
+.ftco-footer p,
+.ftco-footer li,
+.ftco-footer .text,
+.ftco-footer a{color:#fff !important;}
+.ftco-footer a:hover{color:var(--p11-red-bright) !important;}
+
+/* Social buttons */
+.ftco-footer-social li a{
+  background:#0e0e0e !important;
+  border:1px solid rgba(255,255,255,.10);
+}
+.ftco-footer-social li a:hover{
+  background:var(--p11-red) !important;
+  border-color:var(--p11-red) !important;
+}
+.ftco-footer-social li a:hover span{color:#fff !important;}
+
+/* Mouse scroll indicator */
+.mouse-icon{border-color:rgba(255,255,255,.75) !important;}
+.mouse-wheel{background:rgba(255,255,255,.08);}
+.mouse-wheel span{color:#fff !important;}
+.mouse-icon:hover{border-color:var(--p11-red-bright) !important;}
+.mouse-icon:focus-visible{
+  outline:3px solid #fff !important;
+  outline-offset:6px;
+  border-radius:6px;
+}
+
+/* Image overlays — darker cinematic */
+.img,
+.bg-image,
+.blog-img,
+.project .img{
+  position:relative;
+}
+
+/* Video/project hover */
+.project .overlay,
+.project:hover .overlay{background:rgba(0,0,0,.28) !important;}
+
+/* Mobile menu */
+@media(max-width:991.98px){
+  #ftco-nav{
+    background:#070707 !important;
+    border-top:1px solid rgba(255,255,255,.07);
+    box-shadow:0 15px 35px rgba(0,0,0,.5);
+  }
+  #ftco-nav .nav-link{color:#fff !important;}
+}
+
+/* Small premium red glow at section transitions */
+.ftco-section{position:relative;}
+.ftco-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:180px;
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(209,15,31,.55),transparent);
+  pointer-events:none;
+}
+
+/* Accessibility: never remove keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline:2px solid #fff !important;
+  outline-offset:4px;
+}
+</style>
+
+<style>
+/* ===== P11 CINEMATIC HOVER ENHANCEMENTS ===== */
+.navbar-nav .nav-link{transition:color .35s ease,transform .35s ease,text-shadow .35s ease;position:relative;}
+.navbar-nav .nav-link::after{content:"";position:absolute;left:50%;bottom:4px;width:0;height:1px;background:#e10600;box-shadow:0 0 10px rgba(225,6,0,.65);transform:translateX(-50%);transition:width .35s ease;}
+.navbar-nav .nav-link:hover,.navbar-nav .nav-link:focus-visible{color:#fff!important;transform:translateY(-1px);text-shadow:0 0 12px rgba(255,255,255,.22);}
+.navbar-nav .nav-link:hover::after,.navbar-nav .nav-link:focus-visible::after{width:70%;}
+.btn,.button,.site-btn,a.btn{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,filter .35s ease,background .35s ease!important;}
+.btn:hover,.button:hover,.site-btn:hover,a.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.45),0 0 18px rgba(225,6,0,.22);filter:brightness(1.08);}
+.btn:active,.button:active,.site-btn:active,a.btn:active{transform:translateY(-1px) scale(.99);}
+.service-wrap,.services,.service-card,.card{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease,border-color .45s ease,background .45s ease!important;will-change:transform;}
+.service-wrap:hover,.services:hover,.service-card:hover,.card:hover{transform:translateY(-7px);box-shadow:0 18px 45px rgba(0,0,0,.5),0 0 24px rgba(225,6,0,.12);border-color:rgba(225,6,0,.35)!important;}
+.project,.project-item,.portfolio-item,.work,.project-wrap,.img-portfolio{transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease,filter .5s ease!important;will-change:transform;}
+.project:hover,.project-item:hover,.portfolio-item:hover,.work:hover,.project-wrap:hover,.img-portfolio:hover{transform:translateY(-6px) scale(1.012);box-shadow:0 20px 50px rgba(0,0,0,.55),0 0 26px rgba(225,6,0,.14);}
+.project img,.project-item img,.portfolio-item img,.work img,.project-wrap img{transition:transform .65s cubic-bezier(.2,.8,.2,1),filter .65s ease!important;}
+.project:hover img,.project-item:hover img,.portfolio-item:hover img,.work:hover img,.project-wrap:hover img{transform:scale(1.035);filter:brightness(1.06);}
+@media (prefers-reduced-motion:reduce){.navbar-nav .nav-link,.btn,.button,.site-btn,a.btn,.service-wrap,.services,.service-card,.card,.project,.project-item,.portfolio-item,.work,.project-wrap,.img-portfolio,.project img,.project-item img,.portfolio-item img,.work img,.project-wrap img{transition:none!important;transform:none!important;}}
+</style>
+
+<!-- P11 Studio: Touch-safe cinematic hover enhancements -->
+<style id="p11-touch-hover-fix">
+/* Keep transforms GPU-friendly and prevent hover effects from changing layout */
+.navbar-nav .nav-link,
+.btn,
+.service-item,
+.services-2,
+.project,
+.project-item,
+.portfolio-item,
+.card,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Desktop / real hover devices only */
+@media (hover: hover) and (pointer: fine) {
+  .navbar-nav .nav-link {
+    transition: color .28s ease, transform .28s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn {
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .service-item,
+  .services-2,
+  .project,
+  .project-item,
+  .portfolio-item,
+  .card {
+    transition: transform .35s ease, box-shadow .35s ease;
+    will-change: transform;
+  }
+
+  .service-item:hover,
+  .services-2:hover,
+  .project:hover,
+  .project-item:hover,
+  .portfolio-item:hover,
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Touch devices: no sticky hover transforms or scale effects */
+@media (hover: none), (pointer: coarse) {
+  .navbar-nav .nav-link,
+  .btn,
+  .service-item,
+  .services-2,
+  .project,
+  .project-item,
+  .portfolio-item,
+  .card {
+    transform: none !important;
+    transition: box-shadow .25s ease, background-color .25s ease, opacity .25s ease;
+    will-change: auto;
+  }
+
+  /* Give touch feedback without moving/resizing elements */
+  .btn:active {
+    transform: none !important;
+    opacity: .88;
+  }
+
+  .service-item:active,
+  .services-2:active,
+  .project:active,
+  .project-item:active,
+  .portfolio-item:active,
+  .card:active {
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(120, 0, 0, .18);
+  }
+
+  .navbar-nav .nav-link:active {
+    transform: none !important;
+    opacity: .8;
+  }
+
+  /* Prevent image zoom on touch that can visually shift card bounds */
+  .project img,
+  .project-item img,
+  .portfolio-item img {
+    transform: none !important;
+    transition: opacity .25s ease, filter .25s ease;
+  }
+}
+
+/* Preserve white typography */
+body,
+body * {
+  --p11-text: #fff;
+}
+
+body {
+  color: #fff;
+}
+
+.navbar-nav .nav-link,
+.btn,
+.service-item,
+.services-2,
+.project,
+.project-item,
+.portfolio-item,
+.card,
+.service-item h1,
+.service-item h2,
+.service-item h3,
+.service-item h4,
+.service-item h5,
+.service-item h6,
+.project h1,
+.project h2,
+.project h3,
+.project h4,
+.project h5,
+.project h6 {
+  color: #fff;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-nav .nav-link,
+  .btn,
+  .service-item,
+  .services-2,
+  .project,
+  .project-item,
+  .portfolio-item,
+  .card,
+  .project img,
+  .project-item img,
+  .portfolio-item img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+</style>
+
+
+<!-- P11 Studio: Mobile spacing & touch-target optimization -->
+<style id="p11-mobile-optimization">
+@media (max-width: 767.98px) {
+  /* Prevent accidental horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Comfortable mobile section spacing */
+  section {
+    scroll-margin-top: 64px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Navigation: minimum comfortable touch area */
+  #ftco-nav .nav-link,
+  .navbar-nav .nav-link {
+    min-height: 48px;
+    padding: 13px 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-toggler {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Buttons: larger tap targets without changing layout dimensions */
+  .btn,
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 48px;
+    padding: 12px 20px;
+    line-height: 1.2;
+  }
+
+  /* Keep button groups usable on narrow screens */
+  .btn + .btn {
+    margin-left: 6px;
+  }
+
+  /* Service cards: more breathing room */
+  .service-item,
+  .services-2 {
+    padding: 24px 20px !important;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  .service-item h3,
+  .services-2 h3 {
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .service-item p,
+  .services-2 p {
+    margin-bottom: 0;
+    line-height: 1.65;
+  }
+
+  /* Portfolio cards: prevent cramped tap areas */
+  .project,
+  .project-item,
+  .portfolio-item {
+    margin-bottom: 18px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .project a,
+  .project-item a,
+  .portfolio-item a {
+    display: block;
+    min-height: 48px;
+  }
+
+  /* Keep card contents from touching edges */
+  .project .text,
+  .project-item .text,
+  .portfolio-item .text {
+    padding: 18px 16px;
+  }
+
+  /* Hero: avoid cramped mobile composition */
+  .hero-wrap .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-wrap h1 {
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+
+  .hero-wrap h2 {
+    line-height: 1.35;
+  }
+
+  /* Scroll control remains easy to tap */
+  .mouse-icon {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  /* Forms: comfortable touch targets */
+  input,
+  textarea,
+  select {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  /* Footer links */
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .service-item,
+  .services-2 {
+    padding: 20px 16px !important;
+  }
+
+  .project .text,
+  .project-item .text,
+  .portfolio-item .text {
+    padding: 16px 14px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 4px 0 !important;
+  }
+
+  /* Avoid oversized mobile hero text */
+  .hero-wrap h1 {
+    font-size: clamp(42px, 13vw, 64px);
+  }
+
+  .hero-wrap h2 {
+    font-size: clamp(15px, 4.5vw, 20px);
+  }
+}
+
+/* Preserve white text and black/red visual language */
+@media (max-width: 767.98px) {
+  body,
+  body p,
+  body span,
+  body a,
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6,
+  .navbar-nav .nav-link,
+  .btn {
+    color: #fff;
+  }
+}
+
+/* Accessibility: remove motion for users who request reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+</style>
+
+
+<!-- P11 Studio: mobile portfolio browsing -->
+<style id="p11-mobile-portfolio-browsing">
+@media (max-width: 767.98px) {
+  /* Horizontal swipe rail for portfolio/project groups when the existing
+     layout uses a row/grid of project cards. */
+  .portfolio-row,
+  .projects-row,
+  .portfolio-grid,
+  .projects-grid,
+  .project-list {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .portfolio-row::-webkit-scrollbar,
+  .projects-row::-webkit-scrollbar,
+  .portfolio-grid::-webkit-scrollbar,
+  .projects-grid::-webkit-scrollbar,
+  .project-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Cards remain stable: no transform or width change on touch. */
+  .project,
+  .project-item,
+  .portfolio-item {
+    touch-action: pan-y;
+    min-width: 0;
+  }
+
+  /* Larger, cleaner tap zones */
+  .project a,
+  .project-item a,
+  .portfolio-item a {
+    min-height: 48px;
+    touch-action: manipulation;
+  }
+
+  /* Subtle active feedback, without layout movement */
+  .project:active,
+  .project-item:active,
+  .portfolio-item:active {
+    opacity: .92;
+    box-shadow: 0 10px 28px rgba(100, 0, 0, .20);
+  }
+
+  /* Swipe cue: only visible when a horizontal rail is actually scrollable */
+  .p11-swipe-cue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: -2px auto 18px;
+    color: rgba(255,255,255,.68);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    pointer-events: none;
+    opacity: .8;
+  }
+
+  .p11-swipe-cue::before,
+  .p11-swipe-cue::after {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: rgba(170,0,0,.65);
+  }
+
+  .p11-swipe-cue .p11-swipe-arrow {
+    display: inline-block;
+    animation: p11SwipeNudge 1.8s ease-in-out infinite;
+  }
+
+  @keyframes p11SwipeNudge {
+    0%, 100% { transform: translateX(0); opacity: .55; }
+    50% { transform: translateX(5px); opacity: 1; }
+  }
+
+  /* If cards are displayed as a normal stacked grid, add breathing room
+     rather than forcing horizontal scrolling. */
+  .project + .project,
+  .project-item + .project-item,
+  .portfolio-item + .portfolio-item {
+    margin-top: 16px;
+  }
+
+  /* Keep portfolio images visually stable during touch interaction. */
+  .project img,
+  .project-item img,
+  .portfolio-item img {
+    transform: none !important;
+    backface-visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .p11-swipe-cue {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p11-swipe-cue .p11-swipe-arrow {
+    animation: none !important;
+  }
+}
+</style>
+
+
+<!-- P11 Studio: touch tap-to-preview -->
+<style id="p11-tap-preview">
+@media (max-width: 767.98px) {
+  .p11-touch-preview {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(0,0,0,.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .p11-touch-preview.is-open {
+    display: flex;
+  }
+
+  .p11-preview-panel {
+    position: relative;
+    width: min(100%, 620px);
+    max-height: 88vh;
+    overflow: auto;
+    border: 1px solid rgba(150,0,0,.55);
+    border-radius: 14px;
+    background: #090909;
+    box-shadow: 0 24px 70px rgba(0,0,0,.7), 0 0 36px rgba(120,0,0,.18);
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform .24s ease, opacity .24s ease;
+  }
+
+  .p11-touch-preview.is-open .p11-preview-panel {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .p11-preview-media {
+    width: 100%;
+    max-height: 65vh;
+    display: block;
+    object-fit: contain;
+    background: #000;
+  }
+
+  .p11-preview-content {
+    padding: 16px 18px 18px;
+  }
+
+  .p11-preview-title,
+  .p11-preview-content p,
+  .p11-preview-content a {
+    color: #fff !important;
+  }
+
+  .p11-preview-title {
+    margin: 0 42px 6px 0;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .p11-preview-content p {
+    margin: 0;
+    opacity: .78;
+    line-height: 1.55;
+  }
+
+  .p11-preview-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 50%;
+    background: rgba(0,0,0,.72);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    touch-action: manipulation;
+  }
+
+  .p11-preview-close:active {
+    background: rgba(130,0,0,.8);
+  }
+
+  /* No movement/scale on the original portfolio item. */
+  .p11-tap-preview-target {
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .p11-tap-preview-target:active {
+    opacity: .9;
+  }
+
+  body.p11-preview-lock {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .p11-touch-preview {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p11-preview-panel {
+    transition: none !important;
+  }
+}
+</style>
+
+
+<style id="p11-visual-system">
+:root{--p11-red:#d20f18;--p11-red-soft:rgba(210,15,24,.34);--p11-black:#050505}
+body{background:var(--p11-black);color:#fff}
+body,body p,body span,body a,body h1,body h2,body h3,body h4,body h5,body h6,body label,body button{color:#fff}
+body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(circle at 15% 20%,rgba(210,15,24,.07),transparent 28%),radial-gradient(circle at 86% 72%,rgba(210,15,24,.05),transparent 26%)}
+section{position:relative;isolation:isolate;overflow:hidden}
+section::before{content:"";position:absolute;width:38vw;height:38vw;max-width:520px;max-height:520px;border-radius:50%;background:radial-gradient(circle,rgba(210,15,24,.11),rgba(210,15,24,.025) 38%,transparent 70%);filter:blur(10px);opacity:.6;pointer-events:none;z-index:-1;transform:translate3d(-12%,8%,0)}
+section:nth-of-type(even)::before{left:auto;right:-10%;transform:translate3d(0,-5%,0)}
+.p11-light-streak{position:absolute;width:min(42vw,520px);height:1px;background:linear-gradient(90deg,transparent,rgba(210,15,24,.72),transparent);box-shadow:0 0 12px rgba(210,15,24,.24);opacity:.4;pointer-events:none;z-index:0;transform:rotate(-8deg)}
+.p11-wireframe{position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.065);border-radius:50%;opacity:.3;pointer-events:none;z-index:0}
+.p11-wireframe::before,.p11-wireframe::after{content:"";position:absolute;inset:18%;border:1px solid rgba(210,15,24,.14);border-radius:50%}
+.p11-wireframe::after{inset:0;border-left-color:transparent;border-right-color:transparent;transform:rotate(55deg)}
+.p11-comp-mark{position:absolute;width:24px;height:24px;opacity:.22;pointer-events:none;z-index:0}
+.p11-comp-mark::before,.p11-comp-mark::after{content:"";position:absolute;background:rgba(255,255,255,.3)}
+.p11-comp-mark::before{width:24px;height:1px;top:12px}.p11-comp-mark::after{width:1px;height:24px;left:12px}
+.project,.project-item,.portfolio-item{position:relative;overflow:hidden}
+.project::after,.project-item::after,.portfolio-item::after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid rgba(255,255,255,.055);box-shadow:inset 0 -45px 70px rgba(0,0,0,.25);z-index:2;transition:border-color .35s ease,box-shadow .35s ease}
+@media (hover:hover) and (pointer:fine){
+.project:hover::after,.project-item:hover::after,.portfolio-item:hover::after{border-color:rgba(210,15,24,.38);box-shadow:inset 0 -45px 70px rgba(0,0,0,.25),inset 0 0 28px rgba(210,15,24,.05)}
+.project img,.project-item img,.portfolio-item img{transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .55s ease}
+.project:hover img,.project-item:hover img,.portfolio-item:hover img{transform:scale(1.018);filter:saturate(.94) contrast(1.02)}
+}
+.service-item,.services-2,.card{position:relative;overflow:hidden}
+.service-item::before,.services-2::before,.card::before{content:"";position:absolute;top:0;left:10%;width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(210,15,24,.42),transparent);opacity:.6;pointer-events:none}
+.p11-process-line{position:absolute;left:0;bottom:0;width:0;height:1px;background:linear-gradient(90deg,var(--p11-red),transparent);opacity:.6;transition:width .8s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.p11-reveal-visible .p11-process-line{width:100%}
+@media (max-width:767.98px){section::before{width:70vw;height:70vw;opacity:.4}.p11-wireframe{width:170px;height:170px;opacity:.18}.p11-light-streak{width:70vw;opacity:.25}.p11-comp-mark{opacity:.14}}
+@media (prefers-reduced-motion:reduce){.p11-light-streak,.p11-wireframe,.p11-comp-mark,.p11-process-line{animation:none!important;transition:none!important}.project img,.project-item img,.portfolio-item img{transform:none!important}}
+</style>
+
+
+<style id="p11-post-process">
+.p11-process-section{
+  position:relative;
+  overflow:hidden;
+  background:#050505;
+  border-top:1px solid rgba(210,15,24,.22);
+  border-bottom:1px solid rgba(210,15,24,.22);
+}
+.p11-process-section .container{position:relative;z-index:2}
+.p11-process-glow{
+  position:absolute;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(210,15,24,.13),rgba(210,15,24,.035) 42%,transparent 72%);
+  filter:blur(12px);pointer-events:none;
+}
+.p11-process-glow-left{left:-220px;top:18%}
+.p11-process-glow-right{right:-220px;bottom:4%}
+.p11-process-kicker{
+  display:block;color:#fff!important;font-size:11px;letter-spacing:.28em;
+  opacity:.62;margin-bottom:12px
+}
+.p11-process-heading{
+  margin:0;color:#fff!important;font-size:clamp(34px,5vw,68px);
+  font-weight:700;line-height:.98;letter-spacing:-.035em
+}
+.p11-process-heading span{color:#fff!important}
+.p11-process-subtitle{
+  color:#fff!important;letter-spacing:.25em;font-size:12px;
+  margin:16px 0 0;opacity:.62
+}
+.p11-process-intro{
+  color:#fff!important;opacity:.72;line-height:1.75;margin:0;
+  max-width:480px
+}
+.p11-process-steps{
+  display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr;
+  gap:14px;align-items:center;margin-top:34px
+}
+.p11-process-card{
+  position:relative;padding:0 0 18px;background:rgba(255,255,255,.018);
+  border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.p11-process-card:hover{
+  transform:translateY(-4px);border-color:rgba(210,15,24,.42);
+  box-shadow:0 18px 45px rgba(0,0,0,.4),0 0 28px rgba(210,15,24,.08)
+}
+.p11-process-number{
+  position:absolute;left:14px;top:12px;z-index:3;color:#d20f18!important;
+  font-size:11px;font-weight:700;letter-spacing:.1em
+}
+.p11-process-image{position:relative;aspect-ratio:16/8.5;overflow:hidden;background:#000}
+.p11-process-image::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.15),transparent 55%,rgba(0,0,0,.58))
+}
+.p11-process-image img{width:100%;height:100%;object-fit:cover;display:block}
+.p11-process-label{
+  position:absolute;left:16px;bottom:12px;z-index:2;color:#fff!important;
+  font-size:10px;letter-spacing:.18em
+}
+.p11-process-card h3{
+  color:#fff!important;font-size:18px;margin:18px 18px 7px
+}
+.p11-process-card p{
+  color:#fff!important;opacity:.66;line-height:1.55;font-size:13px;
+  margin:0 18px
+}
+.p11-process-arrow{
+  width:32px;height:32px;border:1px solid rgba(210,15,24,.4);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:16px;opacity:.8
+}
+.p11-process-wide{
+  position:relative;margin-top:38px;border:1px solid rgba(255,255,255,.08);
+  background:#000;overflow:hidden;border-radius:10px
+}
+.p11-process-wide img{display:block;width:100%;height:auto}
+.p11-process-wide-line{
+  position:absolute;left:33.33%;top:0;bottom:0;width:1px;
+  background:rgba(210,15,24,.8);box-shadow:0 0 16px rgba(210,15,24,.5)
+}
+.p11-process-wide-caption{
+  position:absolute;left:0;right:0;bottom:0;display:flex;
+  justify-content:space-around;padding:16px 10px 13px;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));
+  color:#fff!important;font-size:10px;letter-spacing:.22em
+}
+@media(max-width:767.98px){
+  .p11-process-section{padding-top:70px!important;padding-bottom:70px!important}
+  .p11-process-heading{font-size:38px}
+  .p11-process-intro{margin-top:24px;font-size:14px}
+  .p11-process-steps{display:flex;overflow-x:auto;gap:12px;align-items:stretch;
+    padding:4px 2px 16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none}
+  .p11-process-steps::-webkit-scrollbar{display:none}
+  .p11-process-card{flex:0 0 82%;scroll-snap-align:start}
+  .p11-process-arrow{display:none}
+  .p11-process-wide{margin-top:22px}
+  .p11-process-wide-caption{font-size:8px;letter-spacing:.12em}
+}
+@media(prefers-reduced-motion:reduce){
+  .p11-process-card{transition:none!important;transform:none!important}
+}
+</style>
+
+
+<style id="p11-full-cinematic-polish">
+:root{
+  --p11-bg:#040404;
+  --p11-panel:#0a0a0a;
+  --p11-red:#d20f18;
+  --p11-red-soft:rgba(210,15,24,.28);
+  --p11-white:#fff;
+  --p11-muted:rgba(255,255,255,.68);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--p11-bg)!important;
+  color:#fff!important;
+  overflow-x:hidden;
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9990;
+  opacity:.035;
+  background-image:
+    radial-gradient(rgba(255,255,255,.8) .45px,transparent .55px);
+  background-size:4px 4px;
+  mix-blend-mode:screen;
+}
+body p,body span,body a,body h1,body h2,body h3,body h4,body h5,body h6,
+body label,body button,body input,body textarea{color:#fff!important}
+
+/* Section rhythm */
+.ftco-section{padding-top:105px;padding-bottom:105px}
+.ftco-section .heading-section{margin-bottom:42px}
+.ftco-section .subheading{
+  color:#fff!important;
+  opacity:.58;
+  letter-spacing:.22em;
+}
+
+/* Quiet cinematic section dividers */
+.ftco-section:not(.hero-wrap)::before{
+  content:"";
+  position:absolute;
+  left:6%;
+  right:6%;
+  top:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(210,15,24,.32),transparent);
+  pointer-events:none;
+}
+
+/* Navigation polish */
+#ftco-navbar{
+  background:rgba(3,3,3,.82)!important;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+#ftco-nav .nav-link{
+  color:#fff!important;
+  position:relative;
+  transition:opacity .28s ease,transform .28s ease;
+}
+#ftco-nav .nav-link::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:5px;
+  width:0;
+  height:1px;
+  background:var(--p11-red);
+  box-shadow:0 0 10px rgba(210,15,24,.45);
+  transform:translateX(-50%);
+  transition:width .28s ease;
+}
+@media (hover:hover) and (pointer:fine){
+  #ftco-nav .nav-link:hover{transform:translateY(-1px);opacity:1}
+  #ftco-nav .nav-link:hover::after{width:20px}
+}
+
+/* Hero depth without adding game UI */
+.hero-wrap{
+  background-color:#030303!important;
+  background-blend-mode:normal;
+}
+.hero-wrap .overlay{
+  background:
+    radial-gradient(circle at 72% 48%,rgba(210,15,24,.13),transparent 31%),
+    linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.16),rgba(0,0,0,.48))!important;
+}
+.hero-wrap::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:110px;
+  background:linear-gradient(transparent,#040404);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Clean portfolio cards */
+.project,.project-item,.portfolio-item{
+  background:#070707!important;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:10px;
+  overflow:hidden;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.project::before,.project-item::before,.portfolio-item::before{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:10px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--p11-red),transparent);
+  opacity:.45;
+  z-index:4;
+  pointer-events:none;
+}
+@media (hover:hover) and (pointer:fine){
+  .project:hover,.project-item:hover,.portfolio-item:hover{
+    transform:translateY(-4px);
+    border-color:rgba(210,15,24,.38);
+    box-shadow:0 20px 45px rgba(0,0,0,.42),0 0 28px rgba(210,15,24,.08);
+  }
+}
+
+/* Service cards */
+.service-item,.services-2,.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.008))!important;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+@media (hover:hover) and (pointer:fine){
+  .service-item:hover,.services-2:hover,.card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(210,15,24,.38);
+    box-shadow:0 18px 42px rgba(0,0,0,.38),0 0 25px rgba(210,15,24,.07);
+  }
+}
+
+/* Buttons */
+.btn{
+  border-radius:999px!important;
+  color:#fff!important;
+  border:1px solid rgba(210,15,24,.62)!important;
+  background:linear-gradient(180deg,rgba(210,15,24,.16),rgba(210,15,24,.05))!important;
+  box-shadow:0 0 0 rgba(210,15,24,0);
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease!important;
+}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{
+    transform:translateY(-2px);
+    border-color:rgba(255,255,255,.5)!important;
+    box-shadow:0 10px 30px rgba(210,15,24,.14),0 0 16px rgba(210,15,24,.12);
+  }
+}
+
+/* Process section: same visual language as portfolio */
+.p11-process-section{
+  background:
+    radial-gradient(circle at 15% 45%,rgba(210,15,24,.06),transparent 28%),
+    radial-gradient(circle at 85% 60%,rgba(210,15,24,.05),transparent 26%),
+    #040404!important;
+}
+.p11-process-card{
+  background:#070707!important;
+}
+
+/* Contact / footer */
+footer,.ftco-footer{
+  background:#030303!important;
+  border-top:1px solid rgba(210,15,24,.18);
+}
+.form-control{
+  color:#fff!important;
+  background:rgba(255,255,255,.025)!important;
+  border-color:rgba(255,255,255,.1)!important;
+}
+.form-control::placeholder{color:rgba(255,255,255,.42)!important}
+
+/* Touch devices: stable geometry */
+@media (hover:none),(pointer:coarse){
+  .project,.project-item,.portfolio-item,
+  .service-item,.services-2,.card,.btn,#ftco-nav .nav-link{
+    transform:none!important;
+  }
+  .project:active,.project-item:active,.portfolio-item:active,
+  .service-item:active,.services-2:active,.card:active{
+    opacity:.92;
+  }
+}
+
+/* Mobile spacing */
+@media(max-width:767.98px){
+  .ftco-section{padding-top:76px;padding-bottom:76px}
+  .ftco-section .heading-section{margin-bottom:30px}
+  .container{padding-left:18px;padding-right:18px}
+}
+
+/* Accessibility */
+:focus-visible{
+  outline:2px solid #fff!important;
+  outline-offset:4px;
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    transition:none!important;
+    animation:none!important;
+  }
+}
+</style>
+
+
+<style id="p11-contact-cinematic">
+.p11-contact-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 55%,rgba(210,15,24,.055),transparent 28%),
+    radial-gradient(circle at 88% 30%,rgba(210,15,24,.045),transparent 26%),
+    #040404!important;
+  border-top:1px solid rgba(210,15,24,.22);
+}
+.p11-contact-section .container{position:relative;z-index:2}
+.p11-contact-orb{
+  position:absolute;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(210,15,24,.12),rgba(210,15,24,.025) 40%,transparent 72%);
+  filter:blur(12px);pointer-events:none
+}
+.p11-contact-orb-left{left:-250px;top:25%}
+.p11-contact-orb-right{right:-260px;bottom:-120px}
+.p11-contact-line{
+  position:absolute;height:1px;width:34vw;max-width:440px;
+  background:linear-gradient(90deg,transparent,rgba(210,15,24,.42),transparent);
+  opacity:.55;pointer-events:none
+}
+.p11-contact-line-one{right:-80px;top:25%;transform:rotate(-8deg)}
+.p11-contact-line-two{left:-120px;bottom:20%;transform:rotate(7deg)}
+.p11-contact-kicker{
+  display:block;color:#fff!important;opacity:.55;font-size:11px;
+  letter-spacing:.28em;margin-bottom:14px
+}
+.p11-contact-heading{
+  color:#fff!important;font-size:clamp(38px,6vw,76px);line-height:.95;
+  letter-spacing:-.045em;font-weight:700;margin:0
+}
+.p11-contact-heading span{color:#fff!important}
+.p11-contact-intro{
+  color:#fff!important;opacity:.68;line-height:1.8;
+  max-width:500px;margin:0
+}
+.p11-contact-info{
+  border-left:1px solid rgba(210,15,24,.45);
+  padding-left:22px
+}
+.p11-contact-info-item{
+  padding:0 0 25px;margin-bottom:25px;
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.p11-contact-label{
+  display:block;color:#fff!important;opacity:.45;font-size:10px;
+  letter-spacing:.22em;margin-bottom:9px
+}
+.p11-contact-info-item p{
+  color:#fff!important;margin:0;font-size:13px;
+  letter-spacing:.08em;line-height:1.6
+}
+.p11-contact-email{
+  color:#fff!important;font-size:18px;text-decoration:none;
+  position:relative
+}
+.p11-contact-email::after{
+  content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;
+  background:#d20f18;transform:scaleX(0);transform-origin:left;
+  transition:transform .3s ease
+}
+.p11-contact-email:hover::after{transform:scaleX(1)}
+.p11-contact-note{
+  display:flex;align-items:center;gap:12px;color:#fff!important;
+  opacity:.5;font-size:11px;line-height:1.5
+}
+.p11-contact-mark{
+  width:34px;height:34px;border:1px solid rgba(210,15,24,.55);
+  border-radius:50%;display:inline-flex;align-items:center;
+  justify-content:center;color:#fff!important;font-size:9px;
+  letter-spacing:.08em;flex:0 0 auto
+}
+.p11-contact-form{
+  padding:28px;
+  background:rgba(255,255,255,.018);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
+  box-shadow:0 24px 70px rgba(0,0,0,.22)
+}
+.p11-field{margin-bottom:20px}
+.p11-field label{
+  display:block;color:#fff!important;opacity:.48;font-size:10px;
+  letter-spacing:.2em;margin-bottom:8px
+}
+.p11-field input,.p11-field select,.p11-field textarea{
+  width:100%;color:#fff!important;background:#080808!important;
+  border:1px solid rgba(255,255,255,.1)!important;border-radius:5px;
+  padding:13px 14px;outline:none;transition:border-color .25s ease,box-shadow .25s ease
+}
+.p11-field input,.p11-field select{height:50px}
+.p11-field textarea{min-height:125px;resize:vertical}
+.p11-field input::placeholder,.p11-field textarea::placeholder{
+  color:rgba(255,255,255,.35)!important
+}
+.p11-field select option{background:#080808;color:#fff}
+.p11-field input:focus,.p11-field select:focus,.p11-field textarea:focus{
+  border-color:rgba(210,15,24,.65)!important;
+  box-shadow:0 0 0 3px rgba(210,15,24,.08)
+}
+.p11-contact-submit-row{
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:8px
+}
+.p11-contact-submit{
+  min-height:48px!important;padding:13px 22px!important;
+  white-space:nowrap
+}
+.p11-contact-submit span{margin-left:12px}
+.p11-contact-caption{
+  color:#fff!important;opacity:.38;font-size:9px;letter-spacing:.16em
+}
+@media(max-width:767.98px){
+  .p11-contact-section{padding-top:76px!important;padding-bottom:76px!important}
+  .p11-contact-heading{font-size:42px}
+  .p11-contact-intro{margin-top:24px}
+  .p11-contact-info{margin-bottom:35px;padding-left:16px}
+  .p11-contact-form{padding:20px}
+  .p11-contact-submit{width:100%;justify-content:center}
+  .p11-contact-caption{width:100%;text-align:center}
+  .p11-contact-orb{width:260px;height:260px;opacity:.55}
+  .p11-contact-line{width:65vw;opacity:.3}
+}
+@media(prefers-reduced-motion:reduce){
+  .p11-contact-email::after,.p11-contact-form *{transition:none!important}
+}
+</style>
+
+
+<style id="p11-contact-form-polish">
+/* P11 Studio — refined contact form interactions */
+.p11-contact-form .p11-field{
+  position:relative;
+}
+.p11-contact-form .p11-field input,
+.p11-contact-form .p11-field select,
+.p11-contact-form .p11-field textarea{
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background-color .25s ease,
+    transform .25s ease;
+}
+.p11-contact-form .p11-field input:hover,
+.p11-contact-form .p11-field select:hover,
+.p11-contact-form .p11-field textarea:hover{
+  border-color:rgba(255,255,255,.22)!important;
+  background-color:rgba(255,255,255,.035)!important;
+}
+.p11-contact-form .p11-field input:focus,
+.p11-contact-form .p11-field select:focus,
+.p11-contact-form .p11-field textarea:focus{
+  border-color:rgba(210,15,24,.78)!important;
+  box-shadow:
+    0 0 0 3px rgba(210,15,24,.09),
+    0 8px 28px rgba(0,0,0,.18);
+  background-color:#090909!important;
+}
+.p11-contact-form .p11-field label{
+  transition:color .25s ease,opacity .25s ease;
+}
+.p11-contact-form .p11-field:focus-within label{
+  color:#fff!important;
+  opacity:.78;
+}
+.p11-contact-form .p11-field input:valid:not(:placeholder-shown),
+.p11-contact-form .p11-field textarea:valid:not(:placeholder-shown){
+  border-color:rgba(255,255,255,.18)!important;
+}
+.p11-contact-form .p11-field input:invalid:not(:placeholder-shown),
+.p11-contact-form .p11-field textarea:invalid:not(:placeholder-shown),
+.p11-contact-form .p11-field select:invalid{
+  border-color:rgba(210,15,24,.72)!important;
+  box-shadow:0 0 0 3px rgba(210,15,24,.07);
+}
+.p11-contact-form .p11-field input:focus:invalid:not(:placeholder-shown),
+.p11-contact-form .p11-field textarea:focus:invalid:not(:placeholder-shown),
+.p11-contact-form .p11-field select:focus:invalid{
+  border-color:#d20f18!important;
+  box-shadow:0 0 0 3px rgba(210,15,24,.11);
+}
+.p11-contact-form .p11-field .p11-validation-message{
+  display:none;
+  margin-top:7px;
+  color:#ff6b70!important;
+  font-size:10px;
+  letter-spacing:.03em;
+}
+.p11-contact-form .p11-field.p11-invalid .p11-validation-message{
+  display:block;
+}
+.p11-contact-submit{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.p11-contact-submit::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-80%;
+  width:45%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.13),transparent);
+  transform:skewX(-18deg);
+  transition:left .55s ease;
+  pointer-events:none;
+  z-index:-1;
+}
+@media (hover:hover) and (pointer:fine){
+  .p11-contact-submit:hover::before{left:135%}
+  .p11-contact-submit:hover{
+    box-shadow:0 12px 34px rgba(210,15,24,.16),0 0 18px rgba(210,15,24,.09)!important;
+  }
+}
+.p11-contact-submit:active{
+  transform:translateY(0)!important;
+  opacity:.88;
+}
+.p11-contact-status{
+  min-height:18px;
+  margin-top:13px;
+  color:rgba(255,255,255,.58)!important;
+  font-size:11px;
+  line-height:1.5;
+}
+.p11-contact-status.is-success{
+  color:#fff!important;
+}
+.p11-contact-status.is-error{
+  color:#ff6b70!important;
+}
+@media (max-width:767.98px){
+  .p11-contact-form .p11-field input,
+  .p11-contact-form .p11-field select,
+  .p11-contact-form .p11-field textarea{
+    min-height:50px;
+  }
+  .p11-contact-submit{
+    min-height:50px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .p11-contact-form .p11-field input,
+  .p11-contact-form .p11-field select,
+  .p11-contact-form .p11-field textarea,
+  .p11-contact-form .p11-field label,
+  .p11-contact-submit::before{
+    transition:none!important;
+  }
+}
+</style>
+
+
+<style id="p11-netlify-form-states">
+.p11-honeypot{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+.p11-contact-status{
+  min-height:20px;
+  margin:0 0 14px;
+  font-size:11px;
+  line-height:1.55;
+  letter-spacing:.02em;
+  transition:opacity .25s ease,color .25s ease;
+}
+.p11-contact-status.is-sending{color:rgba(255,255,255,.62)!important;}
+.p11-contact-status.is-success{
+  color:#fff!important;
+  text-shadow:0 0 14px rgba(209,15,31,.18);
+}
+.p11-contact-status.is-error{color:#ff6b70!important;}
+.p11-contact-submit:disabled{
+  cursor:wait!important;
+  opacity:.68!important;
+  filter:none!important;
+  transform:none!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.2)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .p11-contact-status{transition:none!important;}
+}
+</style>
+
+
+<style id="p11-thankyou-screen">
+.p11-thankyou-screen{
+  position:absolute;
+  inset:0;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(209,15,31,.12),transparent 34%),
+    linear-gradient(135deg,#080808 0%,#050505 60%,#090909 100%);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity .45s ease,transform .45s ease,visibility .45s ease;
+  overflow:hidden;
+}
+.p11-thankyou-screen::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(209,15,31,.7),transparent);
+  transform:rotate(-18deg);
+  top:18%;
+  right:-12%;
+  box-shadow:0 0 24px rgba(209,15,31,.22);
+}
+.p11-thankyou-screen::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  border:1px solid rgba(209,15,31,.10);
+  border-radius:50%;
+  right:-120px;
+  bottom:-150px;
+}
+.p11-contact-form.is-thankyou .p11-thankyou-screen{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+.p11-thankyou-inner{
+  position:relative;
+  z-index:2;
+  width:min(620px,100%);
+  text-align:center;
+}
+.p11-thankyou-mark{
+  width:58px;
+  height:58px;
+  margin:0 auto 25px;
+  border:1px solid rgba(209,15,31,.65);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:25px;
+  box-shadow:0 0 30px rgba(209,15,31,.12),inset 0 0 20px rgba(209,15,31,.06);
+}
+.p11-thankyou-kicker{
+  margin:0 0 10px;
+  color:#d10f1f!important;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:4px;
+}
+.p11-thankyou-title{
+  margin:0 0 18px;
+  color:#fff!important;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.02;
+  letter-spacing:-1px;
+  font-weight:600;
+}
+.p11-thankyou-copy{
+  max-width:510px;
+  margin:0 auto 27px;
+  color:rgba(255,255,255,.70)!important;
+  font-size:14px;
+  line-height:1.8;
+}
+.p11-thankyou-next{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:28px;
+  padding:10px 15px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.025);
+  color:rgba(255,255,255,.78)!important;
+  font-size:10px;
+  letter-spacing:1.7px;
+}
+.p11-thankyou-next span{
+  color:#d10f1f!important;
+}
+.p11-thankyou-back{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:12px 22px!important;
+  cursor:pointer;
+}
+.p11-thankyou-screen .p11-thankyou-note{
+  margin-top:14px;
+  color:rgba(255,255,255,.35)!important;
+  font-size:9px;
+  letter-spacing:1px;
+}
+.p11-contact-form{
+  position:relative;
+  overflow:hidden;
+}
+@media(max-width:767.98px){
+  .p11-thankyou-screen{padding:25px 20px}
+  .p11-thankyou-title{font-size:38px}
+  .p11-thankyou-copy{font-size:13px}
+  .p11-thankyou-next{line-height:1.5}
+}
+@media(prefers-reduced-motion:reduce){
+  .p11-thankyou-screen{transition:none!important}
+}
+</style>
+
+
+<style id="p11-dynamic-creative-css">
+/* P11 Dynamic Creative Layer — clean cinematic, no HUD */
+html{scroll-behavior:smooth}
+.p11-red-sweep{position:fixed;top:0;left:-18vw;width:18vw;height:1px;background:linear-gradient(90deg,transparent,#b30000,#fff,transparent);box-shadow:0 0 18px rgba(190,0,0,.65);z-index:9998;pointer-events:none;opacity:0}
+.p11-red-sweep.run{animation:p11Sweep 1.25s cubic-bezier(.22,.61,.36,1) forwards}
+@keyframes p11Sweep{0%{left:-18vw;opacity:0}12%{opacity:1}100%{left:118vw;opacity:0}}
+.p11-cursor-glow{position:fixed;width:180px;height:180px;border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(150,0,0,.10),transparent 65%);mix-blend-mode:screen;opacity:0;transition:opacity .25s ease}
+@media (hover:hover) and (pointer:fine){.p11-cursor-glow{opacity:1}}
+
+/* Cinematic hero depth */
+.hero-wrap{overflow:hidden}
+.hero-wrap:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 72% 45%,rgba(150,0,0,.12),transparent 28%),linear-gradient(105deg,transparent 0 58%,rgba(255,255,255,.025) 59%,transparent 60%);opacity:.9}
+.hero-wrap .slider-text{position:relative;z-index:2}
+.hero-wrap .slider-text h1,.hero-wrap .slider-text h2,.hero-wrap .slider-text p{transform:translateY(12px);opacity:0;animation:p11HeroIn .9s cubic-bezier(.22,.61,.36,1) forwards}
+.hero-wrap .slider-text h1{animation-delay:.12s}.hero-wrap .slider-text h2{animation-delay:.24s}.hero-wrap .slider-text p{animation-delay:.36s}
+@keyframes p11HeroIn{to{transform:none;opacity:1}}
+
+/* Dynamic process timeline */
+.p11-dynamic-process{padding:95px 0 105px;position:relative;overflow:hidden;background:#050505}
+.p11-dynamic-process .p11-dp-head{max-width:780px;margin:0 auto 55px;text-align:center}
+.p11-dynamic-process .p11-dp-kicker{font-size:11px;letter-spacing:4px;color:#aaa;margin-bottom:14px}
+.p11-dynamic-process h2{color:#fff;font-weight:700;letter-spacing:1px;margin:0 0 15px}
+.p11-dynamic-process .p11-dp-head p{color:#888;margin:0}
+.p11-dp-track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1180px;margin:auto}
+.p11-dp-track:before{content:"";position:absolute;top:27px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,#5d0000 12%,#b00000 50%,#5d0000 88%,transparent)}
+.p11-dp-card{position:relative;padding:0 18px;text-align:center;cursor:default}
+.p11-dp-num{width:54px;height:54px;margin:0 auto 22px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;background:#080808;position:relative;z-index:1;transition:.35s ease}
+.p11-dp-card.active .p11-dp-num,.p11-dp-card:hover .p11-dp-num{border-color:#b00000;box-shadow:0 0 28px rgba(170,0,0,.22);transform:scale(1.06)}
+.p11-dp-card h3{font-size:15px;color:#fff;letter-spacing:1.5px;margin-bottom:9px}
+.p11-dp-card p{font-size:13px;color:#777;line-height:1.7;margin:0;transition:.3s ease}
+.p11-dp-card:hover p,.p11-dp-card.active p{color:#aaa}
+.p11-dp-visual{max-width:980px;height:190px;margin:58px auto 0;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(130,0,0,.12),transparent 48%),#080808}
+.p11-dp-visual:before{content:"";position:absolute;inset:20px;border:1px solid rgba(255,255,255,.05);background:linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.06) 50%,transparent 50.2%),linear-gradient(0deg,transparent 49.8%,rgba(255,255,255,.06) 50%,transparent 50.2%);background-size:72px 72px;transform:perspective(500px) rotateX(55deg) scale(1.35);transform-origin:center bottom}
+.p11-dp-orb{position:absolute;width:120px;height:120px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid rgba(210,0,0,.6);box-shadow:0 0 45px rgba(150,0,0,.22),inset 0 0 35px rgba(150,0,0,.08);transition:.55s ease}
+.p11-dp-orb:after{content:"";position:absolute;inset:24px;border-radius:50%;border:1px dashed rgba(255,255,255,.2)}
+.p11-dp-label{position:absolute;bottom:15px;left:20px;font-size:9px;letter-spacing:3px;color:#666}.p11-dp-state{position:absolute;top:15px;right:20px;font-size:9px;letter-spacing:2px;color:#aaa}
+
+/* Idea to final interactive strip */
+.p11-idea-section{padding:100px 0;position:relative;background:#070707;overflow:hidden}
+.p11-idea-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
+.p11-idea-copy .kicker{font-size:10px;letter-spacing:4px;color:#888}.p11-idea-copy h2{font-size:clamp(36px,5vw,68px);line-height:.95;color:#fff;margin:14px 0 24px}.p11-idea-copy h2 span{color:#a00000}.p11-idea-copy p{color:#888;max-width:480px;line-height:1.8}
+.p11-frame{border:1px solid rgba(255,255,255,.1);padding:14px;background:#030303;position:relative}.p11-frame:before{content:"";position:absolute;inset:-1px;border:1px solid rgba(150,0,0,.16);transform:translate(9px,9px);pointer-events:none}
+.p11-stage{height:360px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(160,0,0,.18),transparent 28%),linear-gradient(135deg,#101010,#030303)}
+.p11-stage .wire{position:absolute;inset:16%;border:1px solid rgba(255,255,255,.18);transform:rotate(7deg);transition:.7s ease}.p11-stage .wire:before,.p11-stage .wire:after{content:"";position:absolute;inset:12%;border:1px dashed rgba(180,0,0,.55);transform:rotate(-14deg)}.p11-stage .wire:after{inset:27%;border-style:solid;border-color:rgba(255,255,255,.08);transform:rotate(28deg)}
+.p11-stage .beam{position:absolute;top:-20%;bottom:-20%;left:20%;width:1px;background:linear-gradient(transparent,#a00000,#fff,transparent);box-shadow:0 0 22px rgba(180,0,0,.7);transform:rotate(28deg);transition:left .7s ease}
+.p11-stage .final-core{position:absolute;width:155px;height:155px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%) scale(.72);opacity:.25;background:radial-gradient(circle at 35% 30%,#eee 0 2%,#777 5%,#161616 42%,transparent 70%);filter:drop-shadow(0 0 22px rgba(170,0,0,.35));transition:.8s cubic-bezier(.22,.61,.36,1)}
+.p11-stage.is-final .wire{transform:rotate(7deg) scale(.92);opacity:.08}.p11-stage.is-final .beam{left:78%}.p11-stage.is-final .final-core{transform:translate(-50%,-50%) scale(1);opacity:1}
+.p11-stage-meta{display:flex;justify-content:space-between;padding:13px 2px 0;color:#666;font-size:9px;letter-spacing:2px}.p11-stage-meta strong{color:#aaa;font-weight:500}
+.p11-stage-toggle{display:flex;gap:8px;margin-top:25px}.p11-stage-toggle button{border:1px solid rgba(255,255,255,.12);background:transparent;color:#777;padding:10px 15px;font-size:10px;letter-spacing:2px;cursor:pointer;transition:.3s}.p11-stage-toggle button.active,.p11-stage-toggle button:hover{color:#fff;border-color:#8e0000}
+
+/* Services micro-interaction */
+.p11-service-card,.service-card{transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease}
+.p11-service-card:hover,.service-card:hover{transform:translateY(-7px);border-color:rgba(150,0,0,.45)!important;box-shadow:0 18px 50px rgba(0,0,0,.28),0 0 30px rgba(130,0,0,.07)}
+
+/* Contact dynamic project chips */
+.p11-project-intent{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}.p11-project-intent button{background:transparent;border:1px solid rgba(255,255,255,.1);color:#777;padding:8px 12px;font-size:9px;letter-spacing:1.5px;cursor:pointer;transition:.25s}.p11-project-intent button:hover,.p11-project-intent button.active{color:#fff;border-color:#920000;background:rgba(130,0,0,.08)}
+.p11-live-brief{margin:0 0 24px;padding:14px 16px;border-left:1px solid #920000;background:rgba(255,255,255,.025);color:#777;font-size:11px;letter-spacing:.8px;min-height:46px}.p11-live-brief strong{color:#aaa;font-weight:500}
+
+@media(max-width:767px){.p11-dynamic-process{padding:72px 0}.p11-dp-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 12px 15px}.p11-dp-card{min-width:78vw;scroll-snap-align:center}.p11-dp-track:before{display:none}.p11-dp-visual{height:150px;margin-top:35px}.p11-idea-section{padding:72px 0}.p11-idea-grid{grid-template-columns:1fr;gap:38px}.p11-stage{height:290px}.p11-cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){.p11-red-sweep,.hero-wrap .slider-text h1,.hero-wrap .slider-text h2,.hero-wrap .slider-text p{animation:none;opacity:1;transform:none}.p11-stage *,.p11-dp-card *{transition:none!important}}
+</style>
+
+</head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<!-- P11 STUDIO: FINAL VISUAL SYSTEM -->
+
+
+<div class="p11-light-streak" aria-hidden="true" style="top:18%;right:-8%;"></div>
+<div class="p11-light-streak" aria-hidden="true" style="top:52%;left:-12%;transform:rotate(7deg);"></div>
+<div class="p11-wireframe" aria-hidden="true" style="top:11%;right:-90px;"></div>
+<div class="p11-wireframe" aria-hidden="true" style="top:57%;left:-120px;"></div>
+<div class="p11-comp-mark" aria-hidden="true" style="top:28%;left:5%;"></div>
+<div class="p11-comp-mark" aria-hidden="true" style="top:73%;right:6%;"></div>
+
+
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="P11_Studio_FULL_DYNAMIC_FINAL.html">
+            <img src="Logo/logo_png.png" alt="P11 Studio" class="navbar-logo">
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+                type="button"
+                data-toggle="collapse"
+                data-target="#ftco-nav"
+                aria-controls="ftco-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#creative-process-section" class="nav-link"><span>Process</span></a></li>
+            <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Showreel</span></a></li>
+			  <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+	  <section class="hero-wrap js-fullheight"><div class="p11-process-line" aria-hidden="true"></div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+
+            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
+
+                <div class="text text-center">
+
+                    <span class="subheading">Welcome To</span>
+
+                    <h1>P11 Studio</h1>
+
+                    <h2>
+                        IMAGINATION INTO REALITY
+                        <span
+                            class="txt-rotate"
+                            data-period="2000"
+                            data-rotate='[ "VFX", "3D", "AI" ]'>
+                        </span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section"><div class="p11-process-line" aria-hidden="true"></div>
+    	<div class="container">
+    		<div class="row d-flex no-gutters">
+    			<div class="col-md-6 col-lg-6 d-flex">
+    				<div class="img-about img d-flex align-items-stretch">
+    					<div class="overlay"></div>
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(Logo/logo_png.png);">
+	    				</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-6 pl-md-5 py-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Us</h2>
+		            <p>
+
+P11 Studio is a CG, VFX, and post-production studio creating high-quality visual content for ads, films, web series, and digital media. We combine CG, 3D, VFX, post-production, and AI to turn creative ideas into polished, impactful visuals. Our team works closely with clients to understand their vision and deliver smart, efficient, production-ready solutions with attention to every detail.Have a project in mind? Let’s bring your vision to life.</p>
+		            <ul class="about-info mt-4 px-md-0 px-2">
+		            </ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="mb-4">
+	                <span class="number" data-number="30">0</span>
+	                <span>Project complete</span>
+                </p>
+              </div>
+	          </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-partner"><div class="p11-process-line" aria-hidden="true"></div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="brand_partner/Asset 01.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="brand_partner/Asset 02.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="brand_partner/Asset 03.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="brand_partner/Asset 04.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="brand_partner/Asset 05.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+ 
+    
+<div class="p11-swipe-cue" aria-hidden="true">
+  <span>Swipe to explore</span>
+  <span class="p11-swipe-arrow">→</span>
+</div>
+
+<!-- P11 Dynamic Creative Pipeline -->
+<section class="p11-dynamic-process" id="creative-process-section">
+  <div class="container">
+    <div class="p11-dp-head">
+      <div class="p11-dp-kicker">THE P11 PIPELINE</div>
+      <h2>IDEA → FINAL FRAME</h2>
+      <p>One creative pipeline for CG, VFX, AI and post-production — built around the shot, not the software.</p>
+    </div>
+    <div class="p11-dp-track" id="p11Pipeline">
+      <div class="p11-dp-card active" data-state="BUILD"><div class="p11-dp-num">01</div><h3>BUILD</h3><p>Design the world, asset or visual language.</p></div>
+      <div class="p11-dp-card" data-state="COMPOSITE"><div class="p11-dp-num">02</div><h3>COMPOSITE</h3><p>Bring plates, CG and elements together naturally.</p></div>
+      <div class="p11-dp-card" data-state="REFINE"><div class="p11-dp-num">03</div><h3>REFINE</h3><p>Lighting, detail, colour and finishing pass.</p></div>
+      <div class="p11-dp-card" data-state="DELIVER"><div class="p11-dp-num">04</div><h3>DELIVER</h3><p>A final frame ready for the screen it belongs on.</p></div>
+    </div>
+    <div class="p11-dp-visual" id="p11PipelineVisual" aria-label="Interactive P11 creative pipeline visual">
+      <div class="p11-dp-orb"></div><span class="p11-dp-label">P11 / VISUAL PIPELINE</span><span class="p11-dp-state" id="p11PipelineState">BUILD / 01</span>
+    </div>
+  </div>
+</section>
+
+<!-- P11 Idea to Final interactive visual -->
+<section class="p11-idea-section" id="idea-final-section">
+  <div class="container">
+    <div class="p11-idea-grid">
+      <div class="p11-idea-copy">
+        <div class="kicker">FROM CONCEPT TO SCREEN</div>
+        <h2>TURN THE <span>IDEA</span><br>INTO A FRAME.</h2>
+        <p>See how P11 approaches a visual: start with structure, build the creative, then refine every detail until the frame feels finished.</p>
+        <div class="p11-stage-toggle" role="tablist" aria-label="Visual stages">
+          <button type="button" class="active" data-stage="concept">CONCEPT</button>
+          <button type="button" data-stage="final">FINAL FRAME</button>
+        </div>
+      </div>
+      <div class="p11-frame">
+        <div class="p11-stage" id="p11Stage" aria-live="polite">
+          <div class="wire"></div><div class="beam"></div><div class="final-core"></div>
+        </div>
+        <div class="p11-stage-meta"><span>P11 / VISUAL STUDY</span><strong id="p11StageLabel">01 — STRUCTURE / CONCEPT</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-project" id="projects-section"><div class="p11-process-line" aria-hidden="true"></div>
+    	<div class="container-fluid px-md-0">
+    		<div class="row no-gutters justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Showreel</h1>
+            <h2 class="mb-4">Our Showreel</h2>
+            <p>Experience our 3D, VFX, and AI-powered visuals, where imagination meets precision.</p>
+          </div>
+        </div>
+<!-- Include Magnific Popup CSS & JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup/dist/magnific-popup.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+
+<style>
+  .video-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 0 33px;
+  }
+
+  .video-card {
+    position: relative;
+    min-width: 300px;
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .video-card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-card:hover .overlay {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+  }
+
+  .video-title {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-card:hover .video-title {
+    opacity: 1;
+  }
+
+  /* Popup Background Blur */
+  .mfp-bg {
+    backdrop-filter: blur(100px) saturate(180%);
+    -webkit-backdrop-filter: blur(100px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.4s ease;
+  }
+
+  /* Hide Magnific Popup close button */
+  .mfp-close {
+    display: none !important;
+  }
+
+  /* Popup ko center align karna */
+  .mfp-content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+  }
+
+  .mfp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Video + details box */
+  .video-popup-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 800px;
+    color: white;
+
+    /* Animation start hidden */
+    opacity: 0;
+    transform: scale(0.85) translateY(-20px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* smooth cinematic easing */
+  }
+
+  /* Active class for animation */
+  .video-popup-content.mfp-ready {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  .video-popup-content iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .video-description {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+</style>
+
+<!-- 🧩 Video Section Start -->
+<div class="video-gallery">
+<!-- 0st Video -->
+  <a href="videos/PEPSI_ZERO_SUGAR.mp4" class="popup-video" data-description="This Pepsi Zero Sugar shot was created in Blender, including can modeling, texturing, lighting, water droplet detailing, and rendering. The rendered sequence was imported into After Effects for color matching, integration of stock footage elements, and final compositing, resulting in a polished, high-quality product shot.">
+    <div class="video-card" style="background-image: url('thumbnail/PEPSI_ZERO_SUGAR (1-00-11-22)_1.jpg');">
+      <div class="overlay">
+        <div class="video-title">Pepsi Zero Sugar</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 1st Video -->
+  <a href="videos/Stadium VFX Breakdowm.mp4" class="popup-video" data-description="This stadium VFX breackdown video is fully created in 3D, featuring detailed lighting, realistic crowd multiplication, and dynamic TV screen animations. The entire scene was modeled, lit, while After Effects was used for compositing, visual effects, and cinematic finishing touches.">
+    <div class="video-card" style="background-image: url('thumbnail/Stadium VFX Breakdowm.jpg.jpg');">
+      <div class="overlay">
+        <div class="video-title">Stadium VFX Breakdown</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2nd Video -->
+  <a href="videos/Car_Shot_VFX_Breakdown.mp4" class="popup-video" data-description="This car shot is a full VFX project, with camera tracking in SynthEyes for precise 3D integration. Floor replaced, buildings added in Blender, walls and crowd cleaned, sky replaced, and final compositing in After Effects, including seamless car number plate replacement for a cinematic result.">
+    <div class="video-card" style="background-image: url('thumbnail/Car_Shot_VFX_Breakdown (1-55-28-22).jpg');">
+      <div class="overlay">
+        <div class="video-title">Car_Shot_VFX_Breakdown</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 3nd Video -->
+  <a href="videos/wall clean up.mp4" class="popup-video" data-description="This wall breakdown shot was first camera tracked in SynthEyes for accurate match-moving. The wall was recreated in 3D inside Blender, with matching texture and lighting for realism. In After Effects, the wall object was rotoscoped and seamlessly composited, replacing damaged wallpaper and scratches with a clean, restored surface.">
+    <div class="video-card" style="background-image: url('thumbnail/wall clean up (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Wall Breakdown</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 4nd Video -->
+  <a href="videos/add mobile screen.mp4" class="popup-video" data-description="This mobile screen shot was first tracked in Mocha Pro using screen tracking points for accurate motion data. The UI charging animation was designed and composited in After Effects. The mobile’s green screen was keyed out, preserving subtle real lighting reflections on the screen. The tracked motion data was applied to the UI composition, and the final composite was integrated seamlessly for a realistic, dynamic result.">
+    <div class="video-card" style="background-image: url('thumbnail/add mobile screen (0-00-02-01).jpg');">
+      <div class="overlay">
+        <div class="video-title">Add Mobile Screen</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 5nd Video -->
+  <a href="videos/add monitor screen.mp4" class="popup-video" data-description="This monitor screen shot began with keying out the green screen in After Effects. A new PC UI and photo change animation was designed to respond to the actor’s click. The UI was then corner-pinned to the monitor using motion tracking data from Mocha Pro, ensuring accurate perspective and movement. The result was seamlessly composited, delivering a natural and realistic on-screen interaction.">
+    <div class="video-card" style="background-image: url('thumbnail/add monitor screen (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Add Monitor Screen</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 6nd Video -->
+  <a href="videos/create dead body.mp4" class="popup-video" data-description="This dead body shot involved camera tracking on the character’s clothing to accurately apply blood effects in After Effects. To make the body appear several days old, the blood color was darkened for a more realistic, aged look. Additional fly stock footage was composited to enhance the unsettling realism. After final compositing and color adjustments, the shot achieved a convincing, cinematic dead body effect.">
+    <div class="video-card" style="background-image: url('thumbnail/create dead body (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Dead Body Breakdown</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 7nd Video -->
+  <a href="videos/object remove from face.mp4" class="popup-video" data-description="This face object removal shot was completed in After Effects by cloning out the nose ring. For certain frames, a still frame was cleaned in Photoshop and then tracked back onto the footage. The process ensured seamless blending with skin texture, resulting in a natural, unnoticeable final composite.">
+    <div class="video-card" style="background-image: url('thumbnail/object remove from face (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Face Objects Remove</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 8nd Video -->
+  <a href="videos/shopping bag logo visible.mp4" class="popup-video" data-description="This product visibility enhancement shot was done in After Effects by importing a clear PNG logo to replace the faded brand mark on the bag. The bag was lockdown-tracked to ensure the logo matched movement and perspective, then seamlessly composited for a sharp, clear brand display in the final shot.">
+    <div class="video-card" style="background-image: url('thumbnail/shopping bag logo visible (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Brands/Product Visibility Enhancement</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 9nd Video -->
+  <a href="videos/Stadium cleanup and crowd multiply.mp4" class="popup-video" data-description="This stadium VFX shot involved fixing a broken window and cleaning the floor in After Effects, multiplying the crowd through rotoscoping, and adding a digital balcony screen created in Blender. The screen animation and final compositing were completed in After Effects for a cinematic result.">
+    <div class="video-card" style="background-image: url('thumbnail/Stadium cleanup and crowd multiply (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Stadium Cleanup And Crowd Multiply</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 10nd Video -->
+  <a href="videos/Background change.mp4" class="popup-video" data-description="This background change shot was completed in After Effects by rotoscoping each character in separate parts for precision. The subjects were then seamlessly composited into a new background, ensuring natural integration with lighting, shadows, and depth for a realistic final result.">
+    <div class="video-card" style="background-image: url('thumbnail/Background change (0-02-43-14).jpg');">
+      <div class="overlay">
+        <div class="video-title">Background Change</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 11nd Video -->
+  <a href="videos/Product Branding Enhancement.mp4" class="popup-video" data-description="This shot features a 3D milk packet replacement created in Blender, including custom modeling, texturing, and lighting for realism. The original packet was tracked in Mocha Pro, then replaced with the new 3D model in After Effects. Final color matching and compositing ensured seamless integration with the scene.">
+    <div class="video-card" style="background-image: url('thumbnail/Product Branding Enhancement (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Product Branding Enhancement</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 12nd Video -->
+  <a href="videos/Milk_Splash.mp4" class="popup-video" data-description="This shot features a milk splash simulation created in RealFlow for realistic liquid dynamics. A speedometer arrow animation was designed and integrated in After Effects, followed by final compositing to blend all elements seamlessly into a polished, cinematic visual.">
+    <div class="video-card" style="background-image: url('thumbnail/Milk_Splash (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Milk_Splash</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 13nd Video -->
+  <a href="videos/Ticket_Replacement.mp4" class="popup-video" data-description="In this ICC T20 Women’s World Cup ad shot, the ticket was corner-pinned and animated for replacement in After Effects. The hand was rotoscoped to maintain natural interaction, and final compositing delivered a seamless, realistic integration within the scene.">
+    <div class="video-card" style="background-image: url('thumbnail/Ticket_Replacement (0-00-22-19).jpg');">
+      <div class="overlay">
+        <div class="video-title">Ticket_Replacement</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 14nd Video -->
+  <a href="videos/Beard_TouchUp.mp4" class="popup-video" data-description="In this shot, visible fake beard lines were touched up in After Effects using the brush and clone tools, seamlessly blending them with the actor’s face for a natural, realistic appearance.">
+    <div class="video-card" style="background-image: url('thumbnail/Beard_TouchUp (0-00-00-00).jpg');">
+      <div class="overlay">
+        <div class="video-title">Beard_TouchUp</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 15nd Video -->
+  <a href="videos/Sky_Replacement.mp4" class="popup-video" data-description="This sky replacement shot involved creating a new sky in Unreal Engine and rendering it from a static camera. In After Effects, the original sky was rotoscoped and removed using an inverted mask, then replaced with the rendered sky. Final color tone adjustments ensured perfect blending for a seamless composition.">
+    <div class="video-card" style="background-image: url('thumbnail/Sky_Replacement (0-00-52-06).jpg');">
+      <div class="overlay">
+        <div class="video-title">Sky_Replacement</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 16nd Video -->
+  <a href="videos/Wire_Remove.mp4" class="popup-video" data-description="This wire removal shot was completed in After Effects using the clone tool to seamlessly erase visible wires from the wall and sky, restoring a clean and natural background.">
+    <div class="video-card" style="background-image: url('thumbnail/Wire_Remove (0-07-49-06).jpg');">
+      <div class="overlay">
+        <div class="video-title">Wire_Remove</div>
+      </div>
+    </div>
+  </a>
+</div>
+<!-- 🧩 Video Section End -->
+
+<script>
+  $(document).ready(function () {
+    $('.popup-video').magnificPopup({
+      type: 'inline',
+      midClick: true,
+      closeBtnInside: false, // cross icon hide
+      closeOnBgClick: true,   // popup ke bahar click se close ho
+      items: {
+        src: $('<div class="video-popup-content"><iframe src="" frameborder="0" allowfullscreen></iframe><div class="video-description"></div></div>')
+      },
+      callbacks: {
+        open: function () {
+          var mfp = $.magnificPopup.instance,
+              trigger = $(mfp.st.el),
+              videoSrc = trigger.attr('href'),
+              description = trigger.data('description');
+
+          var content = mfp.content;
+          content.find('iframe').attr('src', videoSrc);
+          content.find('.video-description').text(description);
+
+          // Smooth animation trigger
+          setTimeout(function() {
+            content.addClass('mfp-ready');
+          }, 10);
+        },
+        close: function () {
+          $(this.content).removeClass('mfp-ready'); // Reset animation
+          $(this.content).find('iframe').attr('src', '');
+        }
+      }
+    });
+  });
+</script>
+
+
+    <section class="ftco-section" id="services-section"><div class="p11-process-line" aria-hidden="true"></div>
+    	<div class="container-fluid px-md-5">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Services</h2>
+            <p>We deliver 3D, VFX, and AI-powered services, transforming ideas into stunning visuals.</p>
+          </div>
+        </div>
+
+
+<!-- Services Section -->
+<div class="services-section">
+
+  <!-- VFX Services Card -->
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="services-1 shadow vfx-card" onclick="openVFXPopup()">
+      <span class="icon">
+        <img src="Logo/vfx logo.png" alt="VFX Symbol">
+      </span>
+      <div class="desc">
+        <h3 class="mb-5">VFX Services</h3>
+        <p>Click to know more about my VFX expertise</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3D Services Card -->
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="services-1 shadow new-card" onclick="open3DPopup()">
+      <span class="icon">
+        <img src="Logo/3D logo.png" alt="3D Symbol">
+      </span>
+      <div class="desc">
+        <h3 class="mb-5">3D Services</h3>
+        <p>Click to know more about my 3D expertise</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Services Card -->
+  <div class="col-md-4 d-flex ftco-animate">
+    <div class="services-1 shadow ai-card" onclick="openAIPopup()">
+      <span class="icon">
+        <img src="Logo/AI logo.png" alt="AI Symbol">
+      </span>
+      <div class="desc">
+        <h3 class="mb-5">AI Services</h3>
+        <p>Coming Soon</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Popups -->
+
+<!-- VFX Popup -->
+<div id="vfxPopup" class="vfx-popup">
+  <div class="glass-effect">
+    <video autoplay muted loop playsinline class="vfx-bg-video">
+      <source src="videos/Stadium VFX Breakdowm.mp4" type="video/mp4">
+    </video>
+    <div class="vfx-text">
+      <div class="vfx-header">
+        <h3>VFX Services</h3>
+      </div>
+      <p>
+        I offer professional VFX solutions including compositing & green screen removal, rotoscoping, motion tracking, and clean-up. CGI & 3D integration bring realistic set extensions, crowd simulations, and product visualizations to life. Sky replacement and special effects like fire, smoke, rain, and particles add cinematic impact. Color grading refines the mood and polishes the final visuals.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- 3D Popup -->
+<div id="newPopup" class="vfx-popup">
+  <div class="glass-effect">
+    <video autoplay muted loop playsinline class="vfx-bg-video">
+      <source src="videos/wall clean up.mp4" type="video/mp4">
+    </video>
+    <div class="vfx-text">
+      <div class="vfx-header">
+        <h3>3D Services</h3>
+      </div>
+      <p>
+        I provide professional 3D services including environment and object modeling, sculpting, texturing, and animation. Architectural visualizations, product renders, and cinematic 3D scenes bring ideas to life. I specialize in realistic lighting, materials, and detailed scene setup to achieve visually compelling and immersive results.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- AI Popup -->
+<div id="aiPopup" class="vfx-popup">
+  <div class="glass-effect">
+    <video autoplay muted loop playsinline class="vfx-bg-video">
+      <source src="videos/Gen_4_Turbo_Cinematic_logo_reveal_with_blue_light_rays,_camera_rotating (2).mp4" type="video/mp4">
+    </video>
+    <div class="vfx-text">
+      <div class="vfx-header">
+        <h3>AI Services</h3>
+      </div>
+      <p>
+        I provide AI-powered services including machine learning solutions, intelligent automation, AI-driven visual enhancements, and predictive analytics. These services integrate seamlessly with 3D and VFX workflows to create innovative, data-driven, and immersive experiences.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  function openPopup(id) {
+    const popup = document.getElementById(id);
+    const content = popup.querySelector(".glass-effect");
+    const video = popup.querySelector(".vfx-bg-video");
+
+    popup.style.display = "flex";
+    setTimeout(() => {
+      content.classList.add("active");
+      video.classList.add("active");
+    }, 10);
+  }
+
+  window.openVFXPopup = () => openPopup("vfxPopup");
+  window.open3DPopup = () => openPopup("newPopup");
+  window.openAIPopup = () => openPopup("aiPopup");
+
+  // Close popups on outside click
+  document.querySelectorAll(".vfx-popup").forEach(popup => {
+    popup.addEventListener("click", function(e) {
+      const content = this.querySelector(".glass-effect");
+      const video = this.querySelector(".vfx-bg-video");
+      if (e.target === this) {
+        content.classList.remove("active");
+        video.classList.remove("active");
+        setTimeout(() => {
+          this.style.display = "none";
+        }, 500);
+      }
+    });
+  });
+});
+</script>
+
+    
+<!-- P11 STUDIO — CINEMATIC CONTACT -->
+<section class="p11-contact-section ftco-section" id="contact-section">
+  <div class="p11-contact-orb p11-contact-orb-left" aria-hidden="true"></div>
+  <div class="p11-contact-orb p11-contact-orb-right" aria-hidden="true"></div>
+  <div class="p11-contact-line p11-contact-line-one" aria-hidden="true"></div>
+  <div class="p11-contact-line p11-contact-line-two" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-7">
+        <span class="p11-contact-kicker">LET'S BUILD THE FRAME</span>
+        <h2 class="p11-contact-heading">HAVE A PROJECT<br><span>IN MIND?</span></h2>
+      </div>
+      <div class="col-lg-5">
+        <p class="p11-contact-intro">
+          From CG and VFX to AI-assisted visuals and post-production,
+          tell us what you want to create. We’ll shape the visual approach
+          and take it from idea to final frame.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="p11-contact-info">
+          <div class="p11-contact-info-item">
+            <span class="p11-contact-label">WHAT WE DO</span>
+            <p>CG · VFX · AI · POST PRODUCTION</p>
+          </div>
+
+          <div class="p11-contact-info-item">
+            <span class="p11-contact-label">FOR</span>
+            <p>FILMS · ADS · WEB SERIES · DIGITAL</p>
+          </div>
+
+          <div class="p11-contact-info-item">
+            <span class="p11-contact-label">START A CONVERSATION</span>
+            <a href="mailto:hello@p11studio.com" class="p11-contact-email">
+              hello@p11studio.com
+            </a>
+          </div>
+
+          <div class="p11-contact-note">
+            <span class="p11-contact-mark">P11</span>
+            <span>Clean visuals. Strong frames. Thoughtful post.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form class="p11-contact-form"
+      name="p11-contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="/">
+  <div class="p11-project-intent" aria-label="Quick project type">
+    <button type="button" data-project="CG / 3D">CG</button><button type="button" data-project="VFX">VFX</button><button type="button" data-project="AI Visuals">AI</button><button type="button" data-project="Post Production">POST</button>
+  </div>
+  <div class="p11-live-brief" id="p11LiveBrief"><strong>P11 / PROJECT BRIEF</strong><br>Choose a direction above or use the form below. We’ll take it from idea to final frame.</div>
+
+  <input type="hidden" name="form-name" value="p11-contact">
+  <input type="hidden" name="subject" data-remove-prefix
+         value="New P11 Studio project enquiry from %{formName} — %{submissionId}">
+
+  <p class="p11-honeypot" aria-hidden="true">
+    <label>Don’t fill this out if you’re human:
+      <input name="bot-field" tabindex="-1" autocomplete="off">
+    </label>
+  </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="p11-field">
+                <label for="p11-name">NAME</label>
+                <input type="text" id="p11-name" name="name"
+                       placeholder="Your name" autocomplete="name" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p11-field">
+                <label for="p11-email">EMAIL</label>
+                <input type="email" id="p11-email" name="email"
+                       placeholder="your@email.com" autocomplete="email" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="p11-field">
+            <label for="p11-project">PROJECT TYPE</label>
+            <select id="p11-project" name="project" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>CG / 3D</option>
+              <option>VFX</option>
+              <option>AI Visuals</option>
+              <option>Post Production</option>
+              <option>CG + VFX + Post</option>
+            </select>
+          </div>
+
+          <div class="p11-field">
+            <label for="p11-message">TELL US ABOUT THE PROJECT</label>
+            <textarea id="p11-message" name="message" rows="5"
+                      placeholder="A short brief, timeline or reference is enough to get started."></textarea>
+          </div>
+
+          <div class="p11-contact-status" role="status" aria-live="polite" aria-atomic="true"></div>
+
+          <div class="p11-contact-submit-row">
+            <button type="submit" class="btn p11-contact-submit">
+              START THE CONVERSATION <span aria-hidden="true">→</span>
+            </button>
+            <span class="p11-contact-caption">IDEA → PROCESS → FINAL FRAME</span>
+          </div>
+        
+          <div class="p11-thankyou-screen" aria-hidden="true">
+            <div class="p11-thankyou-inner">
+              <div class="p11-thankyou-mark" aria-hidden="true">✓</div>
+              <div class="p11-thankyou-kicker">P11 STUDIO / BRIEF RECEIVED</div>
+              <h2 class="p11-thankyou-title">THANK YOU.</h2>
+              <p class="p11-thankyou-copy">
+                Your project brief is with us. We’ll review the details and get back
+                to you with the right next step for your CG, VFX, AI or post-production project.
+              </p>
+              <div class="p11-thankyou-next">
+                <span>01</span> REVIEW BRIEF&nbsp;&nbsp;→&nbsp;&nbsp;
+                <span>02</span> DISCUSS&nbsp;&nbsp;→&nbsp;&nbsp;
+                <span>03</span> CREATE
+              </div>
+              <br>
+              <button type="button" class="btn p11-thankyou-back">BACK TO P11 STUDIO</button>
+              <div class="p11-thankyou-note">WE’LL BE IN TOUCH SOON.</div>
+            </div>
+          </div>
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /P11 STUDIO — CINEMATIC CONTACT -->
+
+		
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>3D/VFX Artist, skilled in modeling, animation, VFX & compositing. Passionate about visual storytelling and creative design.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://wa.me/9579211064"><span class="icon-whatsapp"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/pranav-patil-34a442252"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/people/Pranav-Patil/pfbid036L6s95yV1FouPnwBcAEEGu4g8ER5nrCYJjMSycvS617nA3XFbF2B1BNsAgunet3Wl/?mibextid=wwXIfr&rdid=E78wsSQnk81Y4tUs&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16Px7NrVan%2F%3Fmibextid%3DwwXIfr"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/_white_walker.s_11/profilecard/?igsh=MXJnc3A1NzF3c3c="><span class="icon-instagram"></span></a></li>
+				<li class="ftco-animate"><a href="https://www.youtube.com/@_white_walker.s_1185"><span class="icon-youtube"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Andhri West, 400053, Mumbai, Maharashtra, India</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91-9579211064</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">pranavpatilppp@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  
+<style id="p11-cinematic-reveals">
+/* P11 Studio — subtle cinematic section reveals */
+.p11-reveal{opacity:0;transform:translateY(28px) scale(.985);filter:blur(2px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1),filter .8s ease;will-change:opacity,transform,filter;}
+.p11-reveal.p11-visible{opacity:1;transform:none;filter:none;}
+.p11-reveal.p11-delay-1{transition-delay:.08s}.p11-reveal.p11-delay-2{transition-delay:.16s}.p11-reveal.p11-delay-3{transition-delay:.24s}.p11-reveal.p11-delay-4{transition-delay:.32s}
+.p11-section-glow{position:relative;isolation:isolate;}
+.p11-section-glow::before{content:"";position:absolute;left:10%;right:10%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(180,20,20,.45),transparent);opacity:.45;pointer-events:none;}
+@media(prefers-reduced-motion:reduce){.p11-reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}.p11-section-glow::before{display:none}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const sections=document.querySelectorAll('section[id]');
+  sections.forEach((section)=>{
+    section.classList.add('p11-section-glow');
+    const candidates=section.querySelectorAll('.container > .row, .container > .row > [class*="col-"], .container > .heading-section, .container > h1, .container > h2, .container > h3, .container > p, .container > .d-flex, .services-2, .project, .blog-entry, .contact-form');
+    let i=0;
+    candidates.forEach(el=>{if(!el.classList.contains('p11-reveal')){el.classList.add('p11-reveal');el.classList.add('p11-delay-'+((i++%4)+1));}});
+  });
+  const observer=new IntersectionObserver((entries,obs)=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('p11-visible');obs.unobserve(entry.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+  document.querySelectorAll('.p11-reveal').forEach(el=>observer.observe(el));
+});
+</script>
+
+<div class="p11-touch-preview" id="p11TouchPreview" aria-hidden="true">
+  <div class="p11-preview-panel" role="dialog" aria-modal="true" aria-label="Portfolio preview">
+    <button type="button" class="p11-preview-close" id="p11PreviewClose" aria-label="Close preview">&times;</button>
+    <img class="p11-preview-media" id="p11PreviewMedia" alt="">
+    <div class="p11-preview-content">
+      <h3 class="p11-preview-title" id="p11PreviewTitle"></h3>
+      <p id="p11PreviewDescription"></p>
+    </div>
+  </div>
+</div>
+
+
+<script id="p11-tap-preview-script">
+(function () {
+  function initP11TapPreview() {
+    if (window.innerWidth >= 768 || document.getElementById('p11TouchPreview')) return;
+
+    var overlay = document.getElementById('p11TouchPreview');
+    var closeBtn = document.getElementById('p11PreviewClose');
+    var media = document.getElementById('p11PreviewMedia');
+    var title = document.getElementById('p11PreviewTitle');
+    var description = document.getElementById('p11PreviewDescription');
+
+    if (!overlay) return;
+
+    var targets = document.querySelectorAll(
+      '.project, .project-item, .portfolio-item'
+    );
+
+    targets.forEach(function (item) {
+      if (item.dataset.p11PreviewReady) return;
+      item.dataset.p11PreviewReady = '1';
+      item.classList.add('p11-tap-preview-target');
+
+      item.addEventListener('click', function (event) {
+        /* Preserve normal links/buttons inside cards. */
+        if (event.target.closest('a, button, input, video')) return;
+
+        var img = item.querySelector('img');
+        var heading = item.querySelector('h1,h2,h3,h4,h5,h6,.title');
+        var text = item.querySelector('p');
+
+        if (!img) return;
+
+        media.src = img.currentSrc || img.src;
+        media.alt = img.alt || '';
+        title.textContent = heading ? heading.textContent.trim() : 'Portfolio Preview';
+        description.textContent = text ? text.textContent.trim() : '';
+
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('p11-preview-lock');
+        closeBtn.focus({preventScroll: true});
+      });
+    });
+
+    function closePreview() {
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('p11-preview-lock');
+      window.setTimeout(function () {
+        if (!overlay.classList.contains('is-open')) media.removeAttribute('src');
+      }, 250);
+    }
+
+    closeBtn.addEventListener('click', closePreview);
+
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closePreview();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closePreview();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initP11TapPreview);
+  } else {
+    initP11TapPreview();
+  }
+})();
+</script>
+
+
+<script id="p11-visual-system-script">
+(function(){
+ function init(){
+  var sections=document.querySelectorAll('section');
+  if(!sections.length)return;
+  if(!('IntersectionObserver' in window)){sections.forEach(function(s){s.classList.add('p11-reveal-visible')});return}
+  var io=new IntersectionObserver(function(entries){
+   entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('p11-reveal-visible')});
+  },{threshold:.08,rootMargin:'0px 0px -8% 0px'});
+  sections.forEach(function(s){io.observe(s)});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+
+
+<script id="p11-contact-form-polish-script">
+(function(){
+  function initP11ContactForm(){
+    var form=document.querySelector('.p11-contact-form');
+    if(!form || form.dataset.p11NetlifyReady) return;
+    form.dataset.p11NetlifyReady='1';
+
+    var fields=form.querySelectorAll('input:not([type="hidden"]):not([name="bot-field"]),select,textarea');
+    var status=form.querySelector('.p11-contact-status');
+    var submit=form.querySelector('.p11-contact-submit');
+    var originalButton=submit ? submit.innerHTML : '';
+
+    fields.forEach(function(field){
+      var wrapper=field.closest('.p11-field');
+      if(!wrapper) return;
+
+      var message=document.createElement('span');
+      message.className='p11-validation-message';
+      message.setAttribute('aria-live','polite');
+      wrapper.appendChild(message);
+
+      function update(){
+        if(field.checkValidity()){
+          wrapper.classList.remove('p11-invalid');
+          message.textContent='';
+          field.removeAttribute('aria-invalid');
+        }else{
+          wrapper.classList.add('p11-invalid');
+          field.setAttribute('aria-invalid','true');
+
+          if(field.validity.valueMissing){
+            message.textContent='Please fill in this field.';
+          }else if(field.validity.typeMismatch){
+            message.textContent='Please enter a valid email address.';
+          }else{
+            message.textContent='Please check this field.';
+          }
+        }
+      }
+
+      field.addEventListener('blur',update);
+      field.addEventListener('input',function(){
+        if(wrapper.classList.contains('p11-invalid')) update();
+      });
+      field.addEventListener('change',update);
+    });
+
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+
+      if(!form.checkValidity()){
+        form.querySelectorAll('input,select,textarea').forEach(function(field){
+          if(field.name !== 'bot-field' && field.type !== 'hidden'){
+            field.dispatchEvent(new Event('blur'));
+          }
+        });
+
+        status.className='p11-contact-status is-error';
+        status.textContent='Please complete the highlighted fields before sending.';
+        var first=form.querySelector(':invalid');
+        if(first) first.focus();
+        return;
+      }
+
+      // Honeypot: never submit obvious bot traffic.
+      var honeypot=form.querySelector('[name="bot-field"]');
+      if(honeypot && honeypot.value.trim() !== ''){
+        status.className='p11-contact-status is-error';
+        status.textContent='Something went wrong. Please try again.';
+        return;
+      }
+
+      if(submit){
+        submit.disabled=true;
+        submit.setAttribute('aria-busy','true');
+        submit.innerHTML='<span aria-hidden="true">SENDING…</span>';
+      }
+
+      status.className='p11-contact-status is-sending';
+      status.textContent='Sending your project brief…';
+
+      var formData=new FormData(form);
+
+      fetch('/',{
+        method:'POST',
+        headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams(formData).toString()
+      })
+      .then(function(response){
+        if(!response.ok) throw new Error('Netlify form submission failed.');
+        status.className='p11-contact-status is-success';
+        status.textContent='';
+        form.reset();
+
+        form.querySelectorAll('.p11-invalid').forEach(function(wrapper){
+          wrapper.classList.remove('p11-invalid');
+        });
+        form.querySelectorAll('[aria-invalid="true"]').forEach(function(field){
+          field.removeAttribute('aria-invalid');
+        });
+        form.querySelectorAll('.p11-validation-message').forEach(function(message){
+          message.textContent='';
+        });
+
+        form.classList.add('is-thankyou');
+        var thankyouScreen=form.querySelector('.p11-thankyou-screen');
+        if(thankyouScreen){
+          thankyouScreen.setAttribute('aria-hidden','false');
+        }
+        form.querySelector('.p11-thankyou-back').focus();
+      })
+      .catch(function(){
+        status.className='p11-contact-status is-error';
+        status.textContent='We couldn’t send your message right now. Please try again or email us directly.';
+      })
+      .finally(function(){
+        if(submit){
+          submit.disabled=false;
+          submit.removeAttribute('aria-busy');
+          submit.innerHTML=originalButton;
+        }
+      });
+    });
+
+    var backButton=form.querySelector('.p11-thankyou-back');
+    if(backButton){
+      backButton.addEventListener('click',function(){
+        form.classList.remove('is-thankyou');
+        var thankyouScreen=form.querySelector('.p11-thankyou-screen');
+        if(thankyouScreen) thankyouScreen.setAttribute('aria-hidden','true');
+        var nameField=form.querySelector('#p11-name');
+        if(nameField) nameField.focus();
+      });
+    }
+
+    document.addEventListener('keydown',function(event){
+      if(event.key==='Escape' && form.classList.contains('is-thankyou')){
+        if(backButton) backButton.click();
+      }
+    });
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',initP11ContactForm);
+  }else{
+    initP11ContactForm();
+  }
+})();
+</script>
+
+
+<script id="p11-dynamic-creative-js">
+(function(){
+  function ready(fn){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fn);else fn();}
+  ready(function(){
+    /* Signature red sweep on section entry */
+    var sweep=document.createElement('div'); sweep.className='p11-red-sweep'; document.body.appendChild(sweep);
+    if('IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){sweep.classList.remove('run');void sweep.offsetWidth;sweep.classList.add('run');}})},{threshold:.18});
+      document.querySelectorAll('section').forEach(function(sec){obs.observe(sec)});
+    }
+
+    /* Desktop cursor glow */
+    var glow=document.createElement('div');glow.className='p11-cursor-glow';document.body.appendChild(glow);
+    document.addEventListener('mousemove',function(e){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
+
+    /* Interactive pipeline */
+    var cards=document.querySelectorAll('#p11Pipeline .p11-dp-card'), state=document.getElementById('p11PipelineState'), orb=document.querySelector('.p11-dp-orb');
+    cards.forEach(function(card){card.addEventListener('mouseenter',function(){cards.forEach(function(c){c.classList.remove('active')});card.classList.add('active');var st=card.getAttribute('data-state');if(state)state.textContent=st+' / '+card.querySelector('.p11-dp-num').textContent;if(orb){orb.style.transform='translate(-50%,-50%) scale('+(1+Array.from(cards).indexOf(card)*.08)+')';}});});
+
+    /* Idea -> final visual */
+    var stage=document.getElementById('p11Stage'), label=document.getElementById('p11StageLabel');
+    document.querySelectorAll('.p11-stage-toggle button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.p11-stage-toggle button').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');var final=btn.getAttribute('data-stage')==='final';stage.classList.toggle('is-final',final);label.textContent=final?'02 — FINAL FRAME / REFINE':'01 — STRUCTURE / CONCEPT';});});
+
+    /* Contact quick-select */
+    var projectField=document.getElementById('p11-project'), live=document.getElementById('p11LiveBrief');
+    document.querySelectorAll('.p11-project-intent button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.p11-project-intent button').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');var value=btn.getAttribute('data-project');if(projectField){projectField.value=value;projectField.dispatchEvent(new Event('change',{bubbles:true}));}if(live)live.innerHTML='<strong>P11 / PROJECT BRIEF</strong><br>'+value+' selected — tell us what you want to build and we’ll take it from idea to final frame.';});});
+
+    /* Make existing project cards feel alive without layout shift */
+    document.querySelectorAll('.video-card').forEach(function(card){card.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect(),x=((e.clientX-r.left)/r.width-.5)*2,y=((e.clientY-r.top)/r.height-.5)*2;card.style.transform='perspective(700px) rotateX('+(-y*1.5)+'deg) rotateY('+(x*1.5)+'deg) scale(1.012)';});card.addEventListener('mouseleave',function(){card.style.transform='';});});
+  });
+})();
+</script>
+
+</body>
+</html>
